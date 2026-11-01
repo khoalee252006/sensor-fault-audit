@@ -27,6 +27,7 @@ the two registrations.
 trust/      package: datasets, model sampler (testbed.py), synthetic faults (corruptions.py), shifts (shift.py)
 scripts/    15 testbed runner | 16 Study 1 analysis | 17 Study 1 figures | 18 PurpleAir download
             19 Study 2 analysis | 20 Study 2 figures | 21 paper numbers and tables | 22 exploratory Study 2 | 23 design figure
+            24 supplementary tables
             run_all.py (job lists: --suite testbed | studyC)
 tests/      test_testbed.py (about 1 min)
 results/    testbed/ and studyC/: one record per fitted model (*.jsonl, *.meta.json) and the analysis summaries
