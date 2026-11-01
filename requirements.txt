@@ -1,0 +1,15 @@
+numpy>=1.24,<2.4         # shap imports numba, and numba (2026-10) refuses NumPy >= 2.5; 2.3.x is tested
+pandas>=2.0
+pyarrow>=14
+scikit-learn>=1.6        # GroupKFold(shuffle=True) needs >= 1.6
+scipy>=1.11
+catboost==1.2.10
+xgboost==3.3.0
+lightgbm==4.6.0
+shap==0.52.0
+matplotlib>=3.7
+openml>=0.14             # credit-card fraud + OpenML panel (scripts/09_panel.py)
+psutil                  # machine load in scripts/11_latency.py
+# optional:
+# tabpfn                 # tabular foundation model arm ("TabPFN" in trust/models.py); check licence + GPU needs
+# playwright             # screenshot of the decision tool

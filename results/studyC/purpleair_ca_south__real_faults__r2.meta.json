@@ -1,0 +1,86 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 2,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "purpleair_ca_south",
+  "shift": "real_faults",
+  "note": "same audit, deploy on the days after the fault onset when channels A and B disagree (RECORDED channel fault)",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "fb9a2cb16b8705c4",
+  "ce8e6581c3924c65"
+ ],
+ "sizes": {
+  "train": 9791,
+  "cal": 3268,
+  "id": 3234,
+  "ood": 6927,
+  "n_cont": 4,
+  "d": 6
+ },
+ "task": "reg",
+ "source": {
+  "name": "purpleair_ca_south__real_faults__source",
+  "task": "reg",
+  "n": 16293,
+  "d": 6,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 620,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Low-cost PM sensors / recorded channel faults"
+ },
+ "target": {
+  "name": "purpleair_ca_south__real_faults__target",
+  "task": "reg",
+  "n": 6927,
+  "d": 6,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 394,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Low-cost PM sensors / recorded channel faults"
+ }
+}

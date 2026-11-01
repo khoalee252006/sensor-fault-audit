@@ -1,0 +1,87 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 1,
+  "dataset": "diabetes_readmission",
+  "shift": "emergency_admissions",
+  "note": "TableShift shift: audit on non-emergency admission sources, deploy on patients admitted from the emergency room",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "21d515a4cea7c2b3",
+  "c20b5e809ea07870"
+ ],
+ "sizes": {
+  "train": 20000,
+  "cal": 5000,
+  "id": 5000,
+  "ood": 20000,
+  "n_cont": 8,
+  "d": 68
+ },
+ "task": "clf",
+ "source": {
+  "name": "diabetes_readmission__emergency_admissions__source",
+  "task": "clf",
+  "n": 44272,
+  "d": 68,
+  "n_cont": 8,
+  "grouped": true,
+  "n_groups": 36398,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Hospital records (TableShift)",
+  "pos_rate": 0.10473888688109867
+ },
+ "target": {
+  "name": "diabetes_readmission__emergency_admissions__target",
+  "task": "clf",
+  "n": 57494,
+  "d": 68,
+  "n_cont": 8,
+  "grouped": true,
+  "n_groups": 41496,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Hospital records (TableShift)",
+  "pos_rate": 0.11688176157512088
+ }
+}

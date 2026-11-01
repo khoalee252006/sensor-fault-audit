@@ -1,0 +1,86 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 1,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "appliances_energy",
+  "shift": "to_may",
+  "note": "audit on January-February, deploy on may",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "abfc5230a1679adc",
+  "62516a2a3d6389f0"
+ ],
+ "sizes": {
+  "train": 4218,
+  "cal": 1440,
+  "id": 1440,
+  "ood": 3853,
+  "n_cont": 25,
+  "d": 26
+ },
+ "task": "reg",
+ "source": {
+  "name": "appliances_energy__to_may__source",
+  "task": "reg",
+  "n": 7098,
+  "d": 26,
+  "n_cont": 25,
+  "grouped": true,
+  "n_groups": 50,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Building sensors (house)"
+ },
+ "target": {
+  "name": "appliances_energy__to_may__target",
+  "task": "reg",
+  "n": 3853,
+  "d": 26,
+  "n_cont": 25,
+  "grouped": true,
+  "n_groups": 28,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Building sensors (house)"
+ }
+}

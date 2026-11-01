@@ -1,0 +1,87 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 1,
+  "dataset": "uci_har_stairs",
+  "shift": "new_people_g0",
+  "note": "audit on the other 20 people, deploy on subjects 1-10",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "90e5105221493638",
+  "e340355a4c95d4f4"
+ ],
+ "sizes": {
+  "train": 4348,
+  "cal": 1452,
+  "id": 1394,
+  "ood": 3105,
+  "n_cont": 22,
+  "d": 22
+ },
+ "task": "clf",
+ "source": {
+  "name": "uci_har_stairs__new_people_g0__source",
+  "task": "clf",
+  "n": 7194,
+  "d": 22,
+  "n_cont": 22,
+  "grouped": true,
+  "n_groups": 20,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Wearable inertial sensors",
+  "pos_rate": 0.2782874617737003
+ },
+ "target": {
+  "name": "uci_har_stairs__new_people_g0__target",
+  "task": "clf",
+  "n": 3105,
+  "d": 22,
+  "n_cont": 22,
+  "grouped": true,
+  "n_groups": 10,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Wearable inertial sensors",
+  "pos_rate": 0.30531400966183575
+ }
+}

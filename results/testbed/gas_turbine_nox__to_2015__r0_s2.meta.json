@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 2,
+  "dataset": "gas_turbine_nox",
+  "shift": "to_2015",
+  "note": "audit on 2011-2012, deploy on 2015 (year-to-year process drift)",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "42b63ce7b0bc0340",
+  "8583fd4614ba7b04"
+ ],
+ "sizes": {
+  "train": 9020,
+  "cal": 2995,
+  "id": 3024,
+  "ood": 7384,
+  "n_cont": 9,
+  "d": 9
+ },
+ "task": "reg",
+ "source": {
+  "name": "gas_turbine_nox__to_2015__source",
+  "task": "reg",
+  "n": 15039,
+  "d": 9,
+  "n_cont": 9,
+  "grouped": true,
+  "n_groups": 627,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Gas turbine / emissions"
+ },
+ "target": {
+  "name": "gas_turbine_nox__to_2015__target",
+  "task": "reg",
+  "n": 7384,
+  "d": 9,
+  "n_cont": 9,
+  "grouped": true,
+  "n_groups": 308,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Gas turbine / emissions"
+ }
+}

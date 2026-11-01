@@ -1,0 +1,1229 @@
+{
+ "note": "EXPLORATORY, not registered (PREREG_C); see the script docstring",
+ "intel_motes": [
+  "intel_lab_m41",
+  "intel_lab_m44",
+  "intel_lab_m47",
+  "intel_lab_m48",
+  "intel_lab_m9"
+ ],
+ "intel_kind_contrast": {
+  "gaussian": 0.11683447358857157,
+  "bias": -0.03598605405262547,
+  "dropout": 0.18107496272796847,
+  "spike": 0.7305419104771429,
+  "stuck": 0.37585445429880526,
+  "saturation": 0.14078322423569417,
+  "quantize": 0.115293466280075,
+  "gain": 0.04344581593917961,
+  "hardover": 0.7466345962790678
+ },
+ "intel_kind_level": {
+  "gaussian": 0.11361666580428456,
+  "bias": 0.003541883949794888,
+  "dropout": 0.15264262556853117,
+  "spike": 0.556299471609687,
+  "stuck": 0.3267591196058217,
+  "saturation": -0.01780172632549176,
+  "quantize": 0.12182640784056274,
+  "gain": 0.07297614010346799,
+  "hardover": 0.5771887007326222
+ },
+ "chosen_kinds": [
+  "hardover",
+  "spike"
+ ],
+ "groups": [
+  "purpleair_ca_north",
+  "purpleair_ca_south",
+  "purpleair_central_east",
+  "purpleair_west_other"
+ ],
+ "E1_selection": {
+  "real_faults": {
+   "random": {
+    "mean": {
+     "k": 4,
+     "est": 1.9605856859953392,
+     "lo": 1.2399836875912784,
+     "hi": 2.6811876843994,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.28768814907270646,
+     "lo": -2.7952349490984054,
+     "hi": 2.2198586509529927,
+     "n_negative": 2
+    },
+    "per_group": {
+     "purpleair_ca_north": 1.6530533272230787,
+     "purpleair_ca_south": 1.5562647998523378,
+     "purpleair_central_east": 2.0886651549590387,
+     "purpleair_west_other": 2.5443594619469017
+    }
+   },
+   "id_only": {
+    "mean": {
+     "k": 4,
+     "est": 2.2482738350680456,
+     "lo": -0.9617399350008755,
+     "hi": 5.458287605136967,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n_negative": 0
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.7114082517567063,
+     "purpleair_ca_south": 0.8704243966826904,
+     "purpleair_central_east": 2.34537583339911,
+     "purpleair_west_other": 5.065886858433676
+    }
+   },
+   "fault_q0.25": {
+    "mean": {
+     "k": 4,
+     "est": 1.5745439430169965,
+     "lo": -0.7458802534740256,
+     "hi": 3.894968139508019,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.6737298920510493,
+     "lo": -1.7921768902351116,
+     "hi": 0.4447171061330131,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.5755551800306252,
+     "purpleair_ca_south": 0.8704243966826904,
+     "purpleair_central_east": 1.115458177070744,
+     "purpleair_west_other": 3.7367380182839263
+    }
+   },
+   "fault_q0.5": {
+    "mean": {
+     "k": 4,
+     "est": 1.5706665500951702,
+     "lo": -0.7375609810159858,
+     "hi": 3.878894081206326,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.6776072849728756,
+     "lo": -1.8037666272266224,
+     "hi": 0.4485520572808712,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.5755551800306252,
+     "purpleair_ca_south": 0.8704243966826904,
+     "purpleair_central_east": 1.115458177070744,
+     "purpleair_west_other": 3.721228446596621
+    }
+   },
+   "eps0.02_v2": {
+    "mean": {
+     "k": 4,
+     "est": 1.8016023643910206,
+     "lo": -1.2350678154509767,
+     "hi": 4.838272544233018,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.4466714706770251,
+     "lo": -1.3231747359867614,
+     "hi": 0.4298317946327111,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.5755551800306252,
+     "purpleair_ca_south": 0.8704243966826904,
+     "purpleair_central_east": 1.115458177070744,
+     "purpleair_west_other": 4.644971703780023
+    }
+   },
+   "eps0.02_all9": {
+    "mean": {
+     "k": 4,
+     "est": 1.6591895222695618,
+     "lo": -1.124298597952222,
+     "hi": 4.442677642491345,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.5890843127984838,
+     "lo": -1.6355143938540104,
+     "hi": 0.4573457682570429,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.5755551800306252,
+     "purpleair_ca_south": 0.8704243966826904,
+     "purpleair_central_east": 0.9175120913505107,
+     "purpleair_west_other": 4.273266421014421
+    }
+   },
+   "eps0.02_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 1.635185973668655,
+     "lo": -1.1857309165181737,
+     "hi": 4.456102863855484,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.6130878613993909,
+     "lo": -1.554056371486457,
+     "hi": 0.3278806486876753,
+     "n_negative": 4
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.6282715129736482,
+     "purpleair_ca_south": 0.6574082496386788,
+     "purpleair_central_east": 0.9708775332741283,
+     "purpleair_west_other": 4.284186598788164
+    }
+   },
+   "eps0.05_v2": {
+    "mean": {
+     "k": 4,
+     "est": 1.2690759495898516,
+     "lo": -0.6029865712179485,
+     "hi": 3.1411384703976517,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.979197885478194,
+     "lo": -2.452543959361516,
+     "hi": 0.49414818840512775,
+     "n_negative": 4
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.4974027892419035,
+     "purpleair_ca_south": 0.674573864283399,
+     "purpleair_central_east": 0.8867350070230953,
+     "purpleair_west_other": 3.017592137811009
+    }
+   },
+   "eps0.05_all9": {
+    "mean": {
+     "k": 4,
+     "est": 1.1923243009109727,
+     "lo": -0.7821702524926306,
+     "hi": 3.166818854314576,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -1.0559495341570728,
+     "lo": -2.6348966767974975,
+     "hi": 0.5229976084833519,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.27637717862326383,
+     "purpleair_ca_south": 0.8704243966826904,
+     "purpleair_central_east": 0.6049034905269283,
+     "purpleair_west_other": 3.017592137811009
+    }
+   },
+   "eps0.05_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 1.3594109701719923,
+     "lo": -0.7491176681817382,
+     "hi": 3.4679396085257226,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.8888628648960534,
+     "lo": -2.1611178664897164,
+     "hi": 0.3833921366976095,
+     "n_negative": 4
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.6093483274737613,
+     "purpleair_ca_south": 0.5497903699853373,
+     "purpleair_central_east": 0.9490259672523305,
+     "purpleair_west_other": 3.3294792159765403
+    }
+   },
+   "eps0.1_v2": {
+    "mean": {
+     "k": 4,
+     "est": 1.0169344282787065,
+     "lo": -0.5938296075903693,
+     "hi": 2.627698464147782,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -1.2313394067893393,
+     "lo": -2.844122686547135,
+     "hi": 0.3814438729684564,
+     "n_negative": 4
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.17752253735671197,
+     "purpleair_ca_south": 0.45008189517601654,
+     "purpleair_central_east": 0.992257945136248,
+     "purpleair_west_other": 2.4478753354458496
+    }
+   },
+   "eps0.1_all9": {
+    "mean": {
+     "k": 4,
+     "est": 0.7483200899460343,
+     "lo": -1.0607956265376268,
+     "hi": 2.5574358064296954,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -1.4999537451220113,
+     "lo": -3.21951367710413,
+     "hi": 0.21960618686010758,
+     "n_negative": 4
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.118894400394011,
+     "purpleair_ca_south": 0.31475272795494985,
+     "purpleair_central_east": 0.11175789598932646,
+     "purpleair_west_other": 2.4478753354458496
+    }
+   },
+   "eps0.1_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 1.2206647174981713,
+     "lo": -0.4117794430041224,
+     "hi": 2.853108878000465,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -1.0276091175698743,
+     "lo": -2.680375325665749,
+     "hi": 0.6251570905260007,
+     "n_negative": 4
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.6560281766914877,
+     "purpleair_ca_south": 0.5265442276348917,
+     "purpleair_central_east": 0.965568151876437,
+     "purpleair_west_other": 2.7345183137898688
+    }
+   },
+   "eps0.02_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 1.797910262794567,
+     "lo": -1.2415977102380698,
+     "hi": 4.8374182358272035,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.45036357227347884,
+     "lo": -1.338013032989474,
+     "hi": 0.4372858884425163,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.5755551800306252,
+     "purpleair_ca_south": 0.8704243966826904,
+     "purpleair_central_east": 1.100689770684929,
+     "purpleair_west_other": 4.644971703780023
+    }
+   },
+   "eps0.05_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 1.1648953040819903,
+     "lo": -0.7910828544547204,
+     "hi": 3.120873462618701,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -1.0833785309860555,
+     "lo": -2.6723369917320614,
+     "hi": 0.5055799297599501,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.2196003501163297,
+     "purpleair_ca_south": 0.8704243966826904,
+     "purpleair_central_east": 0.6049034905269283,
+     "purpleair_west_other": 2.9646529790020124
+    }
+   },
+   "eps0.1_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 0.9418147362616097,
+     "lo": -0.7450959295242127,
+     "hi": 2.628725402047432,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -1.306459098806436,
+     "lo": -2.863805018758892,
+     "hi": 0.25088682114602,
+     "n_negative": 4
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.03511761720811842,
+     "purpleair_ca_south": 0.4166120358445224,
+     "purpleair_central_east": 0.8676539565479486,
+     "purpleair_west_other": 2.4478753354458496
+    }
+   }
+  },
+  "temporal_clean": {
+   "random": {
+    "mean": {
+     "k": 4,
+     "est": 0.37530886638818695,
+     "lo": -0.012794978812341817,
+     "hi": 0.7634127115887157,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.3305074695988125,
+     "lo": -0.02736293100763737,
+     "hi": 0.6883778702052623,
+     "n_negative": 0
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.15120356450272868,
+     "purpleair_ca_south": 0.18001864422021366,
+     "purpleair_central_east": 0.5521583001737952,
+     "purpleair_west_other": 0.6178549566560103
+    }
+   },
+   "id_only": {
+    "mean": {
+     "k": 4,
+     "est": 0.044801396789374476,
+     "lo": -0.025269112917600756,
+     "hi": 0.11487190649634971,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n_negative": 0
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.048703959135945794,
+     "purpleair_ca_south": 0.007575387268945805,
+     "purpleair_central_east": 0.017524654468460587,
+     "purpleair_west_other": 0.10540158628414571
+    }
+   },
+   "fault_q0.25": {
+    "mean": {
+     "k": 4,
+     "est": 0.03296372992676979,
+     "lo": -0.008000871139013772,
+     "hi": 0.07392833099255336,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.011837666862604682,
+     "lo": -0.041962130633282815,
+     "hi": 0.018286796908073447,
+     "n_negative": 2
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.0297115862972127,
+     "purpleair_ca_south": 0.012438055603728487,
+     "purpleair_central_east": 0.019616718799859243,
+     "purpleair_west_other": 0.07008855900627874
+    }
+   },
+   "fault_q0.5": {
+    "mean": {
+     "k": 4,
+     "est": 0.048537244399554855,
+     "lo": -0.04939054221872735,
+     "hi": 0.14646503101783706,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.0037358476101803824,
+     "lo": -0.0342137925712899,
+     "hi": 0.041685487791650655,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.02545464177605042,
+     "purpleair_ca_south": 0.00880808133201514,
+     "purpleair_central_east": 0.019616718799859243,
+     "purpleair_west_other": 0.14026953569029463
+    }
+   },
+   "eps0.02_v2": {
+    "mean": {
+     "k": 4,
+     "est": 0.12552860389108703,
+     "lo": -0.06476644234943618,
+     "hi": 0.31582365013161023,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.08072720710171255,
+     "lo": -0.08577222567625348,
+     "hi": 0.24722663987967858,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.02987454667512954,
+     "purpleair_ca_south": 0.014672057672441896,
+     "purpleair_central_east": 0.2203157594841573,
+     "purpleair_west_other": 0.2372520517326194
+    }
+   },
+   "eps0.02_all9": {
+    "mean": {
+     "k": 4,
+     "est": 0.08911022640072985,
+     "lo": -0.05934971470223449,
+     "hi": 0.2375701675036942,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.04430882961135537,
+     "lo": -0.12487156122315363,
+     "hi": 0.21348922044586438,
+     "n_negative": 2
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.02987454667512954,
+     "purpleair_ca_south": 0.015704265197367038,
+     "purpleair_central_east": 0.2203157594841573,
+     "purpleair_west_other": 0.0905463342462655
+    }
+   },
+   "eps0.02_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 0.47556461351544316,
+     "lo": -0.8732883015205062,
+     "hi": 1.8244175285513926,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.43076321672606865,
+     "lo": -0.9455505260278918,
+     "hi": 1.807076959480029,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.04155225326613521,
+     "purpleair_ca_south": 0.009619099226504885,
+     "purpleair_central_east": 1.7456855152849868,
+     "purpleair_west_other": 0.10540158628414571
+    }
+   },
+   "eps0.05_v2": {
+    "mean": {
+     "k": 4,
+     "est": 0.06242355872383444,
+     "lo": -0.0009648073057328121,
+     "hi": 0.1258119247534017,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.017622161934459965,
+     "lo": -0.009837597022919836,
+     "hi": 0.045081920891839766,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.042580265860512,
+     "purpleair_ca_south": 0.041098846077472585,
+     "purpleair_central_east": 0.04386117677909027,
+     "purpleair_west_other": 0.1221539461782629
+    }
+   },
+   "eps0.05_all9": {
+    "mean": {
+     "k": 4,
+     "est": 0.05598679063291177,
+     "lo": -0.011901849559005681,
+     "hi": 0.12387543082482923,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.011185393843537303,
+     "lo": -0.012808414730037443,
+     "hi": 0.035179202417112046,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.0380208513108353,
+     "purpleair_ca_south": 0.031237194966785686,
+     "purpleair_central_east": 0.03484081319399576,
+     "purpleair_west_other": 0.11984830306003036
+    }
+   },
+   "eps0.05_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 0.2943153554990542,
+     "lo": -0.3982326938444858,
+     "hi": 0.9868634048425942,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.2495139587096797,
+     "lo": -0.46463076859217456,
+     "hi": 0.963658686011534,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.04584249407412828,
+     "purpleair_ca_south": 0.01407754613092937,
+     "purpleair_central_east": 0.9382994396636403,
+     "purpleair_west_other": 0.1790419421275188
+    }
+   },
+   "eps0.1_v2": {
+    "mean": {
+     "k": 4,
+     "est": 0.0799567676559221,
+     "lo": -0.007427085160617644,
+     "hi": 0.16734062047246184,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.03515537086654763,
+     "lo": 0.003378305608364905,
+     "hi": 0.06693243612473035,
+     "n_negative": 0
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.057057431015447746,
+     "purpleair_ca_south": 0.04638831201775714,
+     "purpleair_central_east": 0.054330545439008816,
+     "purpleair_west_other": 0.16205078215147473
+    }
+   },
+   "eps0.1_all9": {
+    "mean": {
+     "k": 4,
+     "est": 0.06669736014862872,
+     "lo": -0.022605969824741196,
+     "hi": 0.15600069012199863,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.02189596335925425,
+     "lo": -0.022098911296211964,
+     "hi": 0.06589083801472045,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.03076967981620557,
+     "purpleair_ca_south": 0.0328201569157185,
+     "purpleair_central_east": 0.053775322442992664,
+     "purpleair_west_other": 0.14942428141959815
+    }
+   },
+   "eps0.1_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 0.299147553439654,
+     "lo": -0.4374635924100901,
+     "hi": 1.0357586992893981,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.25434615665027954,
+     "lo": -0.506186754998817,
+     "hi": 1.014879068299376,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.02486675085904549,
+     "purpleair_ca_south": 0.027110119194768967,
+     "purpleair_central_east": 0.9872900176098488,
+     "purpleair_west_other": 0.15732332609495278
+    }
+   },
+   "eps0.02_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 0.040972802122707555,
+     "lo": -0.012545493973366614,
+     "hi": 0.09449109821878172,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.003828594666666924,
+     "lo": -0.02791794447287877,
+     "hi": 0.020260755139544923,
+     "n_negative": 2
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.02987454667512954,
+     "purpleair_ca_south": 0.015704265197367038,
+     "purpleair_central_east": 0.027766062372068124,
+     "purpleair_west_other": 0.0905463342462655
+    }
+   },
+   "eps0.05_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 0.061384922552101304,
+     "lo": -0.01474297243758238,
+     "hi": 0.137512817541785,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.016583525762726828,
+     "lo": -0.015682612634851274,
+     "hi": 0.04884966416030493,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.03506726565046035,
+     "purpleair_ca_south": 0.031237194966785686,
+     "purpleair_central_east": 0.04677485455979735,
+     "purpleair_west_other": 0.13246037503136182
+    }
+   },
+   "eps0.1_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 0.07034764886232278,
+     "lo": -0.02723234382190537,
+     "hi": 0.16792764154655093,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.025546252072948313,
+     "lo": -0.014735117806149022,
+     "hi": 0.06582762195204564,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.04333255363640071,
+     "purpleair_ca_south": 0.0328201569157185,
+     "purpleair_central_east": 0.04320153150624235,
+     "purpleair_west_other": 0.1620363533909296
+    }
+   }
+  },
+  "real_faults_dry": {
+   "random": {
+    "mean": {
+     "k": 4,
+     "est": 1.9356695884190653,
+     "lo": 1.0941781863785802,
+     "hi": 2.7771609904595502,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.46979554302036575,
+     "lo": -0.8658402923238058,
+     "hi": 1.8054313783645373,
+     "n_negative": 1
+    },
+    "per_group": {
+     "purpleair_ca_north": 1.6700199861146838,
+     "purpleair_ca_south": 1.4646191052674664,
+     "purpleair_central_east": 1.9330941498015566,
+     "purpleair_west_other": 2.6749451124925545
+    }
+   },
+   "id_only": {
+    "mean": {
+     "k": 4,
+     "est": 1.4658740453986998,
+     "lo": -0.6711470211633919,
+     "hi": 3.6028951119607915,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n_negative": 0
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.5812635226776444,
+     "purpleair_ca_south": 0.6822831293622701,
+     "purpleair_central_east": 1.1547693512708805,
+     "purpleair_west_other": 3.4451801782840037
+    }
+   },
+   "fault_q0.25": {
+    "mean": {
+     "k": 4,
+     "est": 1.0685394173660778,
+     "lo": 0.35140151706977063,
+     "hi": 1.785677317662385,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.3973346280326218,
+     "lo": -1.8482264968786668,
+     "hi": 1.0535572408134233,
+     "n_negative": 2
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.6636558270773586,
+     "purpleair_ca_south": 0.8156058718269312,
+     "purpleair_central_east": 1.1101512255156456,
+     "purpleair_west_other": 1.684744745044376
+    }
+   },
+   "fault_q0.5": {
+    "mean": {
+     "k": 4,
+     "est": 1.0552695118669178,
+     "lo": 0.3322006058541075,
+     "hi": 1.778338417879728,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.4106045335317819,
+     "lo": -1.864668154415417,
+     "hi": 1.0434590873518532,
+     "n_negative": 2
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.6271105034943699,
+     "purpleair_ca_south": 0.8156058718269312,
+     "purpleair_central_east": 1.1101512255156456,
+     "purpleair_west_other": 1.6682104466307244
+    }
+   },
+   "eps0.02_v2": {
+    "mean": {
+     "k": 4,
+     "est": 1.119820701077459,
+     "lo": -0.3806695377881397,
+     "hi": 2.6203109399430575,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.34605334432124074,
+     "lo": -1.0057881993242932,
+     "hi": 0.31368151068181177,
+     "n_negative": 4
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.38461655806771194,
+     "purpleair_ca_south": 0.6759804573346778,
+     "purpleair_central_east": 0.9235194904793773,
+     "purpleair_west_other": 2.4951662984280687
+    }
+   },
+   "eps0.02_all9": {
+    "mean": {
+     "k": 4,
+     "est": 1.1715745883179438,
+     "lo": -0.2698202169211348,
+     "hi": 2.612969393557022,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.294299457080756,
+     "lo": -1.0712946731430872,
+     "hi": 0.48269575898157524,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.38385306737042785,
+     "purpleair_ca_south": 0.6759804573346778,
+     "purpleair_central_east": 1.1919135624500519,
+     "purpleair_west_other": 2.434551266116617
+    }
+   },
+   "eps0.02_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 1.3225900574155722,
+     "lo": -0.4423759959845859,
+     "hi": 3.08755611081573,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.14328398798312744,
+     "lo": -0.5265046549963699,
+     "hi": 0.23993667903011498,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.6597231149823454,
+     "purpleair_ca_south": 0.6528106334975271,
+     "purpleair_central_east": 1.0104129555458252,
+     "purpleair_west_other": 2.967413525636591
+    }
+   },
+   "eps0.05_v2": {
+    "mean": {
+     "k": 4,
+     "est": 0.8551064198740734,
+     "lo": -0.044354222903938645,
+     "hi": 1.7545670626520855,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.6107676255246264,
+     "lo": -1.9225862243274565,
+     "hi": 0.7010509732782038,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.3881431094068059,
+     "purpleair_ca_south": 0.7807008184101031,
+     "purpleair_central_east": 0.5833713050486601,
+     "purpleair_west_other": 1.6682104466307244
+    }
+   },
+   "eps0.05_all9": {
+    "mean": {
+     "k": 4,
+     "est": 1.2168756330209929,
+     "lo": -0.035576641715777235,
+     "hi": 2.469327907757763,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.24899841237770687,
+     "lo": -2.039789651098289,
+     "hi": 1.5417928263428753,
+     "n_negative": 2
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.3535753780747078,
+     "purpleair_ca_south": 0.7807008184101031,
+     "purpleair_central_east": 2.065015888968436,
+     "purpleair_west_other": 1.6682104466307244
+    }
+   },
+   "eps0.05_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 1.1254773059367258,
+     "lo": -0.22697815484153705,
+     "hi": 2.4779327667149884,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.340396739461974,
+     "lo": -1.1485929001912392,
+     "hi": 0.467799421267291,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.6597231149823454,
+     "purpleair_ca_south": 0.6528106334975271,
+     "purpleair_central_east": 0.7926364700416584,
+     "purpleair_west_other": 2.396739005225372
+    }
+   },
+   "eps0.1_v2": {
+    "mean": {
+     "k": 4,
+     "est": 1.2415074249293325,
+     "lo": -0.35124557095405007,
+     "hi": 2.834260420812715,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.22436662046936723,
+     "lo": -1.0625553616589611,
+     "hi": 0.6138221207202266,
+     "n_negative": 2
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.1635042011410427,
+     "purpleair_ca_south": 1.0033252154291201,
+     "purpleair_central_east": 1.2210805891884582,
+     "purpleair_west_other": 2.5781196939587088
+    }
+   },
+   "eps0.1_all9": {
+    "mean": {
+     "k": 4,
+     "est": 0.6914108794690996,
+     "lo": -0.6360349871091509,
+     "hi": 2.01885674604735,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.7744631659296,
+     "lo": -1.991090938821998,
+     "hi": 0.442164606962798,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.021011996892734076,
+     "purpleair_ca_south": 0.8465972145518913,
+     "purpleair_central_east": 0.0883258819053248,
+     "purpleair_west_other": 1.8097084245264485
+    }
+   },
+   "eps0.1_disagree": {
+    "mean": {
+     "k": 4,
+     "est": 1.1127707014067458,
+     "lo": -0.2591153657046126,
+     "hi": 2.4846567685181045,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.35310334399195364,
+     "lo": -1.1343296802768303,
+     "hi": 0.42812299229292305,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.6466016284918275,
+     "purpleair_ca_south": 0.5820839493668684,
+     "purpleair_central_east": 0.8256582225429163,
+     "purpleair_west_other": 2.396739005225372
+    }
+   },
+   "eps0.02_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 1.1386124603760754,
+     "lo": -0.35339837984648637,
+     "hi": 2.6306233005986375,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.32726158502262426,
+     "lo": -1.0795107737055611,
+     "hi": 0.42498760366031263,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.31392318507939176,
+     "purpleair_ca_south": 0.6140618278582409,
+     "purpleair_central_east": 1.1919135624500519,
+     "purpleair_west_other": 2.434551266116617
+    }
+   },
+   "eps0.05_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 0.9473790032117242,
+     "lo": 0.07046188476484039,
+     "hi": 1.824296121658608,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.5184950421869755,
+     "lo": -1.8863367315585968,
+     "hi": 0.8493466471846457,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.35712286603490045,
+     "purpleair_ca_south": 0.7085239476620503,
+     "purpleair_central_east": 1.0773695692164578,
+     "purpleair_west_other": 1.646499629933488
+    }
+   },
+   "eps0.1_intel2": {
+    "mean": {
+     "k": 4,
+     "est": 0.8921332959770073,
+     "lo": -0.6798319911636094,
+     "hi": 2.464098583117624,
+     "n_negative": 0
+    },
+    "vs_id_only": {
+     "k": 4,
+     "est": -0.5737407494216924,
+     "lo": -1.934763221233872,
+     "hi": 0.7872817223904871,
+     "n_negative": 3
+    },
+    "per_group": {
+     "purpleair_ca_north": 0.08960100540997873,
+     "purpleair_ca_south": 1.2784722313368413,
+     "purpleair_central_east": 0.0883258819053248,
+     "purpleair_west_other": 2.1121340652558844
+    }
+   }
+  }
+ },
+ "E2_transfer": {
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "intel_rho_real": {
+   "gaussian": 0.11361666580428456,
+   "bias": 0.003541883949794888,
+   "dropout": 0.15264262556853117,
+   "spike": 0.556299471609687,
+   "stuck": 0.3267591196058217,
+   "saturation": -0.01780172632549176,
+   "quantize": 0.12182640784056274,
+   "gain": 0.07297614010346799,
+   "hardover": 0.5771887007326222
+  },
+  "purpleair_rho_real": {
+   "gaussian": -0.2647631396613516,
+   "bias": -0.2259133035210584,
+   "dropout": 0.012924211431387457,
+   "spike": 0.7596540495855576,
+   "stuck": 0.21391160891587227,
+   "saturation": 0.11589999881721291,
+   "quantize": -0.3384419504786227,
+   "gain": -0.12571284864209237,
+   "hardover": 0.6753340062265171
+  },
+  "spearman_over_kinds": 0.5833333333333334,
+  "p_value": 0.09918581647988327,
+  "intel_top2": [
+   "hardover",
+   "spike"
+  ],
+  "purpleair_top2": [
+   "spike",
+   "hardover"
+  ],
+  "intel2_rho_real": {
+   "k": 4,
+   "est": 0.7003621102004352,
+   "lo": 0.5144062700059074,
+   "hi": 0.8863179503949629,
+   "n_negative": 0
+  }
+ },
+ "E3_conformal": {
+  "real_faults": {
+   "id": {
+    "k": 4,
+    "est": 0.8985716471310298,
+    "lo": 0.8819651492595283,
+    "hi": 0.9151781450025313,
+    "n_negative": 0
+   },
+   "fault": {
+    "k": 4,
+    "est": 0.861845347656825,
+    "lo": 0.8445646078911935,
+    "hi": 0.8791260874224565,
+    "n_negative": 0
+   },
+   "ood": {
+    "k": 4,
+    "est": 0.3818292924009798,
+    "lo": 0.1408543769085619,
+    "hi": 0.6228042078933977,
+    "n_negative": 0
+   }
+  },
+  "temporal_clean": {
+   "id": {
+    "k": 4,
+    "est": 0.8993447993165485,
+    "lo": 0.8752961863294688,
+    "hi": 0.9233934123036283,
+    "n_negative": 0
+   },
+   "fault": {
+    "k": 4,
+    "est": 0.8601433443208731,
+    "lo": 0.8211730935176491,
+    "hi": 0.8991135951240972,
+    "n_negative": 0
+   },
+   "ood": {
+    "k": 4,
+    "est": 0.9018896422523872,
+    "lo": 0.8782063144612207,
+    "hi": 0.9255729700435538,
+    "n_negative": 0
+   }
+  },
+  "real_faults_dry": {
+   "id": {
+    "k": 4,
+    "est": 0.9010135271169614,
+    "lo": 0.8894504117848564,
+    "hi": 0.9125766424490663,
+    "n_negative": 0
+   },
+   "fault": {
+    "k": 4,
+    "est": 0.8662060786686361,
+    "lo": 0.8487302524494368,
+    "hi": 0.8836819048878354,
+    "n_negative": 0
+   },
+   "ood": {
+    "k": 4,
+    "est": 0.3999873632708208,
+    "lo": 0.1313148310814945,
+    "hi": 0.668659895460147,
+    "n_negative": 0
+   }
+  }
+ }
+}

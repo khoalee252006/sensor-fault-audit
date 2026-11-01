@@ -1,0 +1,88 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "gas_drift",
+  "shift": "drift_b8",
+  "note": "real sensor drift: audit on batches 1-5, deploy on batch 8",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "46bbb6be8d4fdec5",
+  "364b06dc3867a36a"
+ ],
+ "sizes": {
+  "train": 2179,
+  "cal": 727,
+  "id": 727,
+  "ood": 294,
+  "n_cont": 32,
+  "d": 32
+ },
+ "task": "clf",
+ "source": {
+  "name": "gas_drift__drift_b8__source",
+  "task": "clf",
+  "n": 3633,
+  "d": 32,
+  "n_cont": 32,
+  "grouped": false,
+  "n_groups": null,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Chemical sensors / real drift",
+  "pos_rate": 0.26204238921001927
+ },
+ "target": {
+  "name": "gas_drift__drift_b8__target",
+  "task": "clf",
+  "n": 294,
+  "d": 32,
+  "n_cont": 32,
+  "grouped": false,
+  "n_groups": null,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Chemical sensors / real drift",
+  "pos_rate": 0.48639455782312924
+ }
+}

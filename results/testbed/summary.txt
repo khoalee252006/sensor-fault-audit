@@ -1,0 +1,181 @@
+Study B testbed: 69 natural shifts, 207 shift x replicate runs; primary stratum = sensor (60 shifts, 12 domains: air_quality, appliances_energy, cmapss, gas_drift, gas_turbine_nox, household_power, hydraulic_valve, intel_lab, steel_energy, tetouan_power, uav_power, uci_har_stairs)
+(pooled = mean of domain means, 95% CI = two-level cluster bootstrap; ROPE |rho| <= 0.1)
+
+P1 (primary): partial Spearman( v2 axis , log OOD loss | log ID loss ), ALL models
+  +0.224 [+0.087, +0.343]  -> inconclusive
+  random effects over 12 domains: +0.260 [+0.146, +0.367], tau(z) = 0.16, 95% prediction interval for a NEW domain [-0.11, +0.56]
+      per-domain verdicts: adds information (positive): 6, inconclusive: 6
+
+P2 (primary): the same WITHIN model families
+  +0.109 [-0.019, +0.240]  -> inconclusive
+  random effects over 12 domains: +0.112 [-0.073, +0.290], tau(z) = 0.28, 95% prediction interval for a NEW domain [-0.50, +0.65]
+      per-domain verdicts: adds information (positive): 2, inconclusive: 9, opposite sign: 1
+
+P2b (companion): the same within the near-optimal band (ID loss <= 1.1 x best, >= 30 models)
+  +0.254 [+0.067, +0.426]  -> inconclusive
+  random effects over 12 domains: +0.252 [+0.004, +0.471], tau(z) = 0.37, 95% prediction interval for a NEW domain [-0.55, +0.81]
+      per-domain verdicts: adds information (positive): 5, inconclusive: 6, opposite sign: 1
+
+by stratum (P1 / P2 / P2b, bootstrap pooled):
+  sensor              60 shifts 12 domains   P1 +0.224 [+0.087, +0.343]   P2 +0.109 [-0.019, +0.240]   P2b +0.254 [+0.067, +0.426]
+  tabular              9 shifts  6 domains   P1 +0.033 [-0.164, +0.219]   P2 +0.087 [-0.045, +0.221]   P2b +0.104 [-0.027, +0.204]
+  all                 69 shifts 18 domains   P1 +0.161 [+0.042, +0.273]   P2 +0.101 [+0.001, +0.199]   P2b +0.205 [+0.064, +0.332]
+  sensor_excl_pilot   41 shifts 11 domains   P1 +0.195 [+0.052, +0.338]   P2 +0.108 [-0.033, +0.251]   P2b +0.234 [+0.024, +0.419]
+
+S1 accuracy on the line (log ID loss vs log OOD loss across the testbed):
+  Pearson +0.719 [+0.489, +0.865]   Spearman +0.531 [+0.339, +0.697]   share of shifts with r > 0.8: 0.37   with Spearman < 0.5: 0.40
+
+S7 every audit signal, all models: partial Spearman with OOD loss given ID loss, and Delta R^2 over ID loss alone
+  disagree_ood           +0.528 [+0.343, +0.669]   dR2 +0.229 [+0.123, +0.350]   adds information (positive)
+  disagree_ratio         +0.368 [+0.243, +0.482]   dR2 +0.219 [+0.113, +0.339]   adds information (positive)
+  all9@high              +0.256 [+0.107, +0.383]   dR2 +0.133 [+0.077, +0.200]   adds information (positive)
+  all9                   +0.256 [+0.104, +0.389]   dR2 +0.135 [+0.077, +0.201]   adds information (positive)
+  all9@low               +0.241 [+0.094, +0.367]   dR2 +0.130 [+0.075, +0.189]   inconclusive
+  spike                  +0.227 [+0.068, +0.378]   dR2 +0.138 [+0.069, +0.217]   inconclusive
+  single_spike_mean      +0.226 [+0.073, +0.373]   dR2 +0.115 [+0.057, +0.181]   inconclusive
+  v2_axis                +0.224 [+0.087, +0.343]   dR2 +0.118 [+0.067, +0.180]   inconclusive
+  single_hardover_mean   +0.223 [+0.064, +0.372]   dR2 +0.129 [+0.067, +0.203]   inconclusive
+  hardover               +0.219 [+0.053, +0.376]   dR2 +0.143 [+0.073, +0.227]   inconclusive
+  stuck                  +0.201 [+0.049, +0.341]   dR2 +0.111 [+0.053, +0.179]   inconclusive
+  single_spike_max       +0.170 [+0.022, +0.324]   dR2 +0.109 [+0.055, +0.176]   inconclusive
+  single_stuck_mean      +0.167 [+0.034, +0.297]   dR2 +0.083 [+0.043, +0.135]   inconclusive
+  single_hardover_max    +0.161 [+0.013, +0.309]   dR2 +0.123 [+0.061, +0.197]   inconclusive
+  dropout                +0.135 [-0.004, +0.267]   dR2 +0.089 [+0.040, +0.154]   inconclusive
+  single_bias_mean       +0.135 [+0.038, +0.229]   dR2 +0.063 [+0.027, +0.111]   inconclusive
+  single_gain_max        +0.121 [+0.042, +0.207]   dR2 +0.049 [+0.029, +0.075]   inconclusive
+  gaussian               +0.111 [+0.006, +0.247]   dR2 +0.046 [+0.021, +0.075]   inconclusive
+  single_gain_mean       +0.108 [+0.055, +0.162]   dR2 +0.048 [+0.023, +0.082]   inconclusive
+  single_bias_max        +0.108 [-0.029, +0.237]   dR2 +0.066 [+0.029, +0.114]   inconclusive
+  gain                   +0.106 [+0.025, +0.210]   dR2 +0.049 [+0.026, +0.075]   inconclusive
+  single_dropout_mean    +0.092 [-0.028, +0.211]   dR2 +0.067 [+0.030, +0.119]   inconclusive
+  bias                   +0.081 [+0.002, +0.156]   dR2 +0.049 [+0.023, +0.086]   inconclusive
+  quantize               +0.069 [+0.011, +0.127]   dR2 +0.032 [+0.017, +0.049]   inconclusive
+  single_stuck_max       +0.050 [-0.099, +0.202]   dR2 +0.078 [+0.038, +0.131]   inconclusive
+  single_dropout_max     -0.001 [-0.138, +0.141]   dR2 +0.059 [+0.024, +0.109]   inconclusive
+  saturation             -0.008 [-0.091, +0.082]   dR2 +0.043 [+0.025, +0.069]   practically no added information (CI inside ROPE)
+  key signals within families / in the near-optimal band:
+  v2_axis                within +0.109 [-0.019, +0.240]   band +0.254 [+0.067, +0.426]
+  all9                   within +0.116 [-0.025, +0.263]   band +0.266 [+0.072, +0.442]
+  hardover               within +0.080 [-0.062, +0.235]   band +0.210 [+0.031, +0.385]
+  disagree_ratio         within +0.338 [+0.242, +0.443]   band +0.342 [+0.178, +0.521]
+
+S2 fault augmentation, matched pairs vs 'none' (median within shift; log-ratio units, negative = lower loss / more robust)
+  gaussian  ID -0.021 [-0.053, +0.005]  synthetic -0.033 [-0.067, -0.007]  effective -0.013 [-0.028, +0.001]  OOD -0.014 [-0.034, +0.004]
+  mixed     ID +0.015 [-0.023, +0.066]  synthetic -0.078 [-0.134, -0.034]  effective -0.013 [-0.026, -0.001]  OOD +0.009 [-0.024, +0.061]
+
+S3 OOD regret of source-only selection rules: geometric-mean excess OOD loss vs the hindsight-best model
+  random                120.4% [  59.1%,  222.1%]   minus id_only   27.5% [  -4.4%,   74.3%]
+  id_only                72.8% [  26.2%,  164.2%]   minus id_only    0.0% [   0.0%,    0.0%]
+  fault_q0.25            55.0% [  22.8%,  112.2%]   minus id_only  -10.3% [ -33.5%,   11.2%]
+  fault_q0.5             52.2% [  21.5%,  110.9%]   minus id_only  -11.9% [ -34.2%,    9.9%]
+  eps0.02_v2             70.4% [  25.2%,  159.5%]   minus id_only   -1.4% [  -3.5%,    0.5%]
+  eps0.02_all9           70.1% [  24.8%,  159.4%]   minus id_only   -1.6% [  -3.5%,    0.2%]
+  eps0.02_disagree       71.2% [  24.9%,  161.3%]   minus id_only   -0.9% [  -2.9%,    1.2%]
+  eps0.05_v2             69.8% [  24.2%,  159.5%]   minus id_only   -1.7% [  -4.5%,    0.8%]
+  eps0.05_all9           70.5% [  24.1%,  162.9%]   minus id_only   -1.3% [  -4.1%,    1.1%]
+  eps0.05_disagree       69.1% [  23.3%,  160.3%]   minus id_only   -2.2% [  -5.8%,    0.8%]
+  eps0.1_v2              67.7% [  23.2%,  157.4%]   minus id_only   -3.0% [  -7.6%,    1.2%]
+  eps0.1_all9            69.8% [  24.2%,  162.0%]   minus id_only   -1.7% [  -6.7%,    2.8%]
+  eps0.1_disagree        68.0% [  23.3%,  158.1%]   minus id_only   -2.8% [  -7.4%,    1.2%]
+
+S4 by shift type (partial Spearman, all models; within = P2)
+  operating_condition  v2_axis +0.27 (n=19)  all9 +0.30 (n=19)  hardover +0.32 (n=19)  stuck +0.27 (n=19)  saturation +0.01 (n=19)  bias +0.06 (n=19)  gain +0.03 (n=19)  within_v2_axis -0.05 (n=19)
+  recorded_faults      v2_axis +0.40 (n=5)  all9 +0.50 (n=5)  hardover +0.58 (n=5)  stuck +0.33 (n=5)  saturation -0.02 (n=5)  bias +0.00 (n=5)  gain +0.07 (n=5)  within_v2_axis +0.12 (n=5)
+  site_population      v2_axis -0.01 (n=7)  all9 +0.04 (n=7)  hardover +0.07 (n=7)  stuck -0.01 (n=7)  saturation +0.24 (n=7)  bias +0.07 (n=7)  gain +0.04 (n=7)  within_v2_axis +0.11 (n=7)
+  temporal_drift       v2_axis +0.24 (n=29)  all9 +0.26 (n=29)  hardover +0.19 (n=29)  stuck +0.21 (n=29)  saturation -0.04 (n=29)  bias +0.09 (n=29)  gain +0.14 (n=29)  within_v2_axis +0.17 (n=29)
+
+S5 Intel lab: estimate(recorded faults) - estimate(clean temporal shift), same motes
+  rho:v2_axis                    mean diff +0.426 over 5 motes (all positive: True)
+  within:v2_axis                 mean diff +0.083 over 5 motes (all positive: False)
+  rho:all9                       mean diff +0.563 over 5 motes (all positive: True)
+  within:all9                    mean diff +0.213 over 5 motes (all positive: True)
+  rho:hardover                   mean diff +0.621 over 5 motes (all positive: True)
+  within:hardover                mean diff +0.355 over 5 motes (all positive: True)
+  rho:spike                      mean diff +0.619 over 5 motes (all positive: True)
+  rho:saturation                 mean diff +0.139 over 5 motes (all positive: False)
+  rho:stuck                      mean diff +0.362 over 5 motes (all positive: True)
+  rho:single_hardover_max        mean diff +0.475 over 5 motes (all positive: True)
+  rho:disagree_ratio             mean diff +0.268 over 5 motes (all positive: True)
+  within:disagree_ratio          mean diff +0.115 over 5 motes (all positive: False)
+
+S8 sensitivity: the same partial Spearman within sub-populations of the testbed
+  none_only              v2_axis +0.242 [+0.083, +0.379]  all9 +0.279 [+0.108, +0.423]  hardover +0.224 [+0.047, +0.393]  disagree_ratio +0.398 [+0.260, +0.511]
+  trees_only             v2_axis +0.042 [-0.110, +0.182]  all9 +0.068 [-0.096, +0.226]  hardover +0.010 [-0.157, +0.178]  disagree_ratio +0.194 [+0.102, +0.289]
+  boosters_only          v2_axis +0.051 [-0.110, +0.199]  all9 +0.076 [-0.091, +0.242]  hardover +0.029 [-0.134, +0.192]  disagree_ratio +0.193 [+0.052, +0.321]
+  no_linear_spline_knn   v2_axis +0.162 [+0.002, +0.297]  all9 +0.187 [+0.014, +0.336]  hardover +0.134 [-0.046, +0.306]  disagree_ratio +0.279 [+0.172, +0.380]
+
+S9 training-seed stability (138 shift x seed runs; Spearman across configurations, seed 0 vs other seed):
+  ID loss +0.98   OOD loss +0.96   v2 axis +0.97   OOD-ID gap +0.96
+
+S6 conformal (target 0.90): ID 0.901  ID-under-fault 0.842  OOD 0.759; partial Spearman(coverage under fault, OOD coverage | ID coverage) +0.389 [+0.311, +0.469]
+
+per shift (all strata): n_models, line r, v2 axis all models / within families / near-optimal band, disagreement
+  [sen] airquality/months_12_14                  temporal_drift      n= 600 reps=3 r=+0.64 v2=+0.62 within=+0.14 band=+0.48 disagree=+0.60
+  [sen] airquality/months_15_16                  temporal_drift      n= 600 reps=3 r=+0.66 v2=+0.49 within=+0.04 band=+0.19 disagree=+0.60
+  [sen] airquality/months_6_8                    temporal_drift      n= 600 reps=3 r=+0.62 v2=+0.49 within=+0.10 band=+0.68 disagree=+0.68
+  [sen] airquality/months_9_11                   temporal_drift      n= 600 reps=3 r=+0.72 v2=+0.60 within=+0.03 band=+0.62 disagree=+0.48
+  [sen] beijing_pm25/temporal_urban              temporal_drift      n= 600 reps=3 r=+0.94 v2=-0.07 within=+0.24 band=+0.32 disagree=-0.11
+  [sen] beijing_pm25/urban_to_Changping          site_population     n= 600 reps=3 r=+0.94 v2=-0.03 within=+0.26 band=+0.45 disagree=+0.37
+  [sen] beijing_pm25/urban_to_Dingling           site_population     n= 600 reps=3 r=+0.92 v2=+0.05 within=+0.23 band=+0.47 disagree=+0.17
+  [sen] beijing_pm25/urban_to_Huairou            site_population     n= 600 reps=3 r=+0.91 v2=-0.04 within=+0.04 band=+0.38 disagree=+0.39
+  [sen] beijing_pm25/urban_to_Shunyi             site_population     n= 600 reps=3 r=+0.97 v2=+0.10 within=+0.21 band=+0.29 disagree=-0.02
+  [sen] appliances_energy/to_april               temporal_drift      n= 600 reps=3 r=+0.78 v2=+0.39 within=+0.42 band=+0.14 disagree=+0.52
+  [sen] appliances_energy/to_march               temporal_drift      n= 600 reps=3 r=+0.84 v2=+0.52 within=+0.56 band=+0.27 disagree=+0.73
+  [sen] appliances_energy/to_may                 temporal_drift      n= 600 reps=3 r=+0.75 v2=+0.58 within=+0.44 band=+0.29 disagree=+0.67
+  [sen] cmapss_fd001_fd003/new_fault_mode        operating_condition n= 600 reps=3 r=+0.39 v2=+0.33 within=+0.15 band=+0.32 disagree=+0.70
+  [sen] cmapss_fd002/leave_condition0_out        operating_condition n= 600 reps=3 r=-0.14 v2=-0.05 within=-0.08 band=-0.34 disagree=+0.30
+  [sen] cmapss_fd002/leave_condition1_out        operating_condition n= 600 reps=3 r=+0.04 v2=-0.15 within=-0.31 band=-0.34 disagree=+0.41
+  [sen] cmapss_fd002/leave_condition2_out        operating_condition n= 600 reps=3 r=+0.01 v2=+0.52 within=+0.28 band=+0.20 disagree=+0.55
+  [sen] cmapss_fd002/leave_condition3_out        operating_condition n= 600 reps=3 r=+0.23 v2=+0.55 within=-0.02 band=+0.39 disagree=+0.77
+  [sen] cmapss_fd002/leave_condition4_out        operating_condition n= 600 reps=3 r=+0.22 v2=+0.32 within=+0.01 band=+0.16 disagree=+0.44
+  [sen] cmapss_fd002/leave_condition5_out        operating_condition n= 600 reps=3 r=+0.06 v2=+0.50 within=+0.31 band=+0.41 disagree=+0.50
+  [sen] cmapss_fd002_fd004/new_fault_mode        operating_condition n= 600 reps=3 r=+0.91 v2=+0.26 within=-0.02 band=+0.06 disagree=+0.34
+  [sen] cmapss_fd004/leave_condition0_out        operating_condition n= 600 reps=3 r=-0.12 v2=+0.02 within=-0.04 band=-0.30 disagree=+0.38
+  [sen] cmapss_fd004/leave_condition1_out        operating_condition n= 600 reps=3 r=-0.02 v2=-0.03 within=-0.30 band=-0.42 disagree=+0.38
+  [sen] cmapss_fd004/leave_condition2_out        operating_condition n= 600 reps=3 r=+0.06 v2=+0.49 within=+0.36 band=+0.48 disagree=+0.52
+  [sen] cmapss_fd004/leave_condition3_out        operating_condition n= 600 reps=3 r=+0.34 v2=+0.48 within=+0.05 band=+0.23 disagree=+0.73
+  [sen] cmapss_fd004/leave_condition4_out        operating_condition n= 600 reps=3 r=+0.24 v2=+0.43 within=+0.30 band=+0.40 disagree=+0.55
+  [sen] cmapss_fd004/leave_condition5_out        operating_condition n= 600 reps=3 r=+0.14 v2=+0.62 within=+0.47 band=+0.64 disagree=+0.51
+  [sen] gas_drift/drift_b10                      temporal_drift      n= 600 reps=3 r=+0.17 v2=+0.27 within=+0.06 band=+0.56 disagree=+0.11
+  [sen] gas_drift/drift_b6                       temporal_drift      n= 600 reps=3 r=+0.46 v2=+0.39 within=+0.31 band=+0.42 disagree=+0.29
+  [sen] gas_drift/drift_b7                       temporal_drift      n= 600 reps=3 r=+0.05 v2=+0.34 within=+0.23 band=+0.59 disagree=+0.36
+  [sen] gas_drift/drift_b8                       temporal_drift      n= 600 reps=3 r=-0.09 v2=+0.33 within=+0.23 band=+0.17 disagree=+0.14
+  [sen] gas_drift/drift_b9                       temporal_drift      n= 600 reps=3 r=+0.02 v2=+0.22 within=+0.05 band=+0.36 disagree=+0.24
+  [sen] gas_turbine_nox/to_2013                  temporal_drift      n= 600 reps=3 r=+0.92 v2=-0.21 within=-0.14 band=-0.04 disagree=+0.14
+  [sen] gas_turbine_nox/to_2014                  temporal_drift      n= 600 reps=3 r=-0.09 v2=-0.28 within=+0.14 band=+0.43 disagree=-0.11
+  [sen] gas_turbine_nox/to_2015                  temporal_drift      n= 600 reps=3 r=-0.41 v2=+0.16 within=+0.42 band=+0.72 disagree=+0.05
+  [sen] household_power/to_2008                  temporal_drift      n= 600 reps=3 r=+0.90 v2=+0.50 within=+0.50 band=+0.64 disagree=+0.36
+  [sen] household_power/to_2009                  temporal_drift      n= 600 reps=3 r=+0.84 v2=+0.51 within=+0.47 band=+0.61 disagree=+0.26
+  [sen] household_power/to_2010                  temporal_drift      n= 600 reps=3 r=+0.83 v2=+0.43 within=+0.43 band=+0.53 disagree=+0.21
+  [sen] hydraulic_valve/accumulator_low          operating_condition n= 600 reps=3 r=+0.89 v2=+0.31 within=+0.01 band=+0.50 disagree=+0.33
+  [sen] hydraulic_valve/cooler_failing           operating_condition n= 600 reps=3 r=-0.28 v2=+0.52 within=-0.08 band=+0.72 disagree=+0.72
+  [sen] intel_lab_m29/temporal_clean             temporal_drift      n= 600 reps=3 r=+0.71 v2=+0.38 within=+0.10 band=+0.10 disagree=+0.61
+  [sen] intel_lab_m41/real_faults                recorded_faults     n= 600 reps=3 r=+0.01 v2=+0.50 within=+0.16 band=+0.21 disagree=+0.67
+  [sen] intel_lab_m41/temporal_clean             temporal_drift      n= 600 reps=3 r=+0.89 v2=+0.38 within=+0.21 band=+0.53 disagree=+0.55
+  [sen] intel_lab_m44/real_faults                recorded_faults     n= 600 reps=3 r=+0.64 v2=+0.21 within=+0.08 band=+0.33 disagree=+0.55
+  [sen] intel_lab_m44/temporal_clean             temporal_drift      n= 600 reps=3 r=+0.90 v2=-0.18 within=-0.03 band=-0.29 disagree=+0.29
+  [sen] intel_lab_m47/real_faults                recorded_faults     n= 600 reps=3 r=+0.63 v2=+0.32 within=+0.06 band=+0.13 disagree=+0.63
+  [sen] intel_lab_m47/temporal_clean             temporal_drift      n= 600 reps=3 r=+0.92 v2=-0.10 within=+0.04 band=+0.41 disagree=+0.27
+  [sen] intel_lab_m48/real_faults                recorded_faults     n= 600 reps=3 r=+0.53 v2=+0.33 within=-0.07 band=+0.70 disagree=+0.70
+  [sen] intel_lab_m48/temporal_clean             temporal_drift      n= 600 reps=3 r=+0.93 v2=-0.27 within=-0.11 band=-0.24 disagree=+0.29
+  [sen] intel_lab_m9/real_faults                 recorded_faults     n= 600 reps=3 r=-0.12 v2=+0.59 within=+0.36 band=+0.85 disagree=+0.54
+  [sen] intel_lab_m9/temporal_clean              temporal_drift      n= 600 reps=3 r=+0.94 v2=+0.01 within=+0.06 band=-0.03 disagree=+0.35
+  [sen] steel_energy/to_q3                       temporal_drift      n= 600 reps=3 r=+0.99 v2=+0.01 within=-0.24 band=-0.25 disagree=+0.40
+  [sen] steel_energy/to_q4                       temporal_drift      n= 600 reps=3 r=+0.99 v2=-0.26 within=-0.30 band=-0.28 disagree=+0.23
+  [sen] tetouan_power/to_q3                      temporal_drift      n= 600 reps=3 r=-0.00 v2=+0.30 within=+0.08 band=+0.17 disagree=+0.57
+  [sen] tetouan_power/to_q4                      temporal_drift      n= 600 reps=3 r=+0.67 v2=+0.22 within=+0.19 band=+0.21 disagree=+0.44
+  [sen] uav_power_v1/leave_altitude_out          operating_condition n= 600 reps=3 r=+0.90 v2=+0.08 within=-0.06 band=-0.35 disagree=+0.45
+  [sen] uav_power_v1/leave_payload_out           operating_condition n= 600 reps=3 r=+0.23 v2=-0.18 within=-0.45 band=-0.45 disagree=-0.40
+  [sen] uav_power_v1/leave_speed_out             operating_condition n= 600 reps=3 r=+0.81 v2=+0.27 within=-0.11 band=-0.29 disagree=+0.44
+  [sen] uci_har_stairs/new_people_g0             site_population     n= 600 reps=3 r=+0.63 v2=+0.33 within=+0.18 band=+0.56 disagree=+0.19
+  [sen] uci_har_stairs/new_people_g1             site_population     n= 600 reps=3 r=+0.75 v2=-0.31 within=-0.00 band=-0.42 disagree=+0.01
+  [sen] uci_har_stairs/new_people_g2             site_population     n= 600 reps=3 r=+0.87 v2=-0.13 within=-0.07 band=+0.08 disagree=+0.05
+  [tab] acs_income/CA_to_PR                      site_population     n= 600 reps=3 r=+0.74 v2=-0.51 within=-0.20 band=-0.00 disagree=+0.05
+  [tab] acs_income/CA_to_TX                      site_population     n= 600 reps=3 r=+0.95 v2=+0.04 within=+0.17 band=+0.24 disagree=+0.02
+  [tab] bike_sharing/to_2012_h1                  temporal_drift      n= 600 reps=3 r=+0.94 v2=+0.02 within=-0.10 band=-0.28 disagree=+0.22
+  [tab] bike_sharing/to_2012_h2                  temporal_drift      n= 600 reps=3 r=+0.96 v2=-0.34 within=-0.15 band=+0.01 disagree=-0.01
+  [tab] credit_fraud/temporal                    temporal_drift      n= 600 reps=3 r=+0.91 v2=+0.36 within=+0.30 band=+0.24 disagree=+0.04
+  [tab] diabetes_readmission/emergency_admissions site_population     n= 600 reps=3 r=+0.94 v2=+0.05 within=+0.02 band=+0.09 disagree=+0.07
+  [tab] elec2/to_q3                              temporal_drift      n= 600 reps=3 r=+0.75 v2=+0.10 within=+0.16 band=+0.02 disagree=+0.24
+  [tab] elec2/to_q4                              temporal_drift      n= 600 reps=3 r=+0.64 v2=-0.19 within=-0.07 band=+0.08 disagree=-0.10
+  [tab] telco_churn/fiber_segment                site_population     n= 600 reps=3 r=+0.71 v2=+0.24 within=+0.28 band=+0.26 disagree=+0.28

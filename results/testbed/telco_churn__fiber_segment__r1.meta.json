@@ -1,0 +1,88 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 1,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "telco_churn",
+  "shift": "fiber_segment",
+  "note": "audit on DSL / no-internet customers, deploy on fiber-optic customers",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "3748a00289110900",
+  "ce234fb38e9ac78c"
+ ],
+ "sizes": {
+  "train": 2361,
+  "cal": 787,
+  "id": 788,
+  "ood": 3096,
+  "n_cont": 3,
+  "d": 30
+ },
+ "task": "clf",
+ "source": {
+  "name": "telco_churn__fiber_segment__source",
+  "task": "clf",
+  "n": 3936,
+  "d": 30,
+  "n_cont": 3,
+  "grouped": false,
+  "n_groups": null,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Business / churn",
+  "pos_rate": 0.14532520325203252
+ },
+ "target": {
+  "name": "telco_churn__fiber_segment__target",
+  "task": "clf",
+  "n": 3096,
+  "d": 30,
+  "n_cont": 3,
+  "grouped": false,
+  "n_groups": null,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Business / churn",
+  "pos_rate": 0.4189276485788114
+ }
+}

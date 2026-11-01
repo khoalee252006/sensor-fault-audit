@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 2,
+  "dataset": "airquality",
+  "shift": "months_9_11",
+  "note": "low-cost sensors age: audit on Mar-May 2004, deploy on month 9-11",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "81089bb0b1064a5c",
+  "b0271a793c0020c6"
+ ],
+ "sizes": {
+  "train": 931,
+  "cal": 310,
+  "id": 311,
+  "ood": 1626,
+  "n_cont": 8,
+  "d": 9
+ },
+ "task": "reg",
+ "source": {
+  "name": "airquality__months_9_11__source",
+  "task": "reg",
+  "n": 1552,
+  "d": 9,
+  "n_cont": 8,
+  "grouped": false,
+  "n_groups": null,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Air quality / low-cost sensors"
+ },
+ "target": {
+  "name": "airquality__months_9_11__target",
+  "task": "reg",
+  "n": 1626,
+  "d": 9,
+  "n_cont": 8,
+  "grouped": false,
+  "n_groups": null,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Air quality / low-cost sensors"
+ }
+}

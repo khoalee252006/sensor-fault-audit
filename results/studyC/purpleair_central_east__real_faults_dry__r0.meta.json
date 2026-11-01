@@ -1,0 +1,86 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "purpleair_central_east",
+  "shift": "real_faults_dry",
+  "note": "as real_faults, restricted to days with sensor RH < 80 % (rules out humidity-driven disagreement)",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "87c310e0672d270d",
+  "594552f359af2d2d"
+ ],
+ "sizes": {
+  "train": 9597,
+  "cal": 3288,
+  "id": 3264,
+  "ood": 3006,
+  "n_cont": 4,
+  "d": 6
+ },
+ "task": "reg",
+ "source": {
+  "name": "purpleair_central_east__real_faults_dry__source",
+  "task": "reg",
+  "n": 16149,
+  "d": 6,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 611,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Low-cost PM sensors / recorded channel faults"
+ },
+ "target": {
+  "name": "purpleair_central_east__real_faults_dry__target",
+  "task": "reg",
+  "n": 3006,
+  "d": 6,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 167,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Low-cost PM sensors / recorded channel faults"
+ }
+}

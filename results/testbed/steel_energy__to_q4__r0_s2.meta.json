@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 2,
+  "dataset": "steel_energy",
+  "shift": "to_q4",
+  "note": "audit on Jan-Jun, deploy on Oct-Dec",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "290bed7e032f103a",
+  "903c556343f7d026"
+ ],
+ "sizes": {
+  "train": 10368,
+  "cal": 3456,
+  "id": 3552,
+  "ood": 8832,
+  "n_cont": 4,
+  "d": 9
+ },
+ "task": "reg",
+ "source": {
+  "name": "steel_energy__to_q4__source",
+  "task": "reg",
+  "n": 17376,
+  "d": 9,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 181,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Industrial energy metering"
+ },
+ "target": {
+  "name": "steel_energy__to_q4__target",
+  "task": "reg",
+  "n": 8832,
+  "d": 9,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 92,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Industrial energy metering"
+ }
+}

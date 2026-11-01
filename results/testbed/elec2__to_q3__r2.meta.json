@@ -1,0 +1,88 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 2,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "elec2",
+  "shift": "to_q3",
+  "note": "audit on the first half of the record, deploy on the third quarter",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "314895f1975e9e25",
+  "4ee89a414e9b2d6c"
+ ],
+ "sizes": {
+  "train": 13584,
+  "cal": 4512,
+  "id": 4560,
+  "ood": 11328,
+  "n_cont": 5,
+  "d": 7
+ },
+ "task": "clf",
+ "source": {
+  "name": "elec2__to_q3__source",
+  "task": "clf",
+  "n": 22656,
+  "d": 7,
+  "n_cont": 5,
+  "grouped": true,
+  "n_groups": 472,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Electricity market",
+  "pos_rate": 0.4295109463276836
+ },
+ "target": {
+  "name": "elec2__to_q3__target",
+  "task": "clf",
+  "n": 11328,
+  "d": 7,
+  "n_cont": 5,
+  "grouped": true,
+  "n_groups": 236,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Electricity market",
+  "pos_rate": 0.4069562146892655
+ }
+}

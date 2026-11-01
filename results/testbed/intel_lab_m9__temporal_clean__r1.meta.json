@@ -1,0 +1,86 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 1,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "intel_lab_m9",
+  "shift": "temporal_clean",
+  "note": "audit on days 0-11, deploy on days 12-26 with every input sensor healthy",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "a47f374ff4107c65",
+  "f81355e252fa40fe"
+ ],
+ "sizes": {
+  "train": 1824,
+  "cal": 526,
+  "id": 560,
+  "ood": 1558,
+  "n_cont": 18,
+  "d": 19
+ },
+ "task": "reg",
+ "source": {
+  "name": "intel_lab_m9__temporal_clean__source",
+  "task": "reg",
+  "n": 2910,
+  "d": 19,
+  "n_cont": 18,
+  "grouped": true,
+  "n_groups": 12,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Wireless sensor network / real faults"
+ },
+ "target": {
+  "name": "intel_lab_m9__temporal_clean__target",
+  "task": "reg",
+  "n": 1558,
+  "d": 19,
+  "n_cont": 18,
+  "grouped": true,
+  "n_groups": 10,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Wireless sensor network / real faults"
+ }
+}

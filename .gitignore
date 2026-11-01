@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+catboost_info/
+*.pred.f32
+data/*
+!data/raw/
+data/raw/*
+!data/raw/studyC/
+data/raw/studyC/*
+!data/raw/studyC/fault_sensors_grouped.csv
+paper_overleaf/

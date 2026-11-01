@@ -1,0 +1,43 @@
+Study C (PurpleAir recorded channel faults): units ['purpleair_ca_north', 'purpleair_ca_south', 'purpleair_central_east', 'purpleair_west_other'], 36 shift x replicate runs
+excluded by the minimum-data rule: none | testable: True
+H1 (confirmatory) rho_real = partial Spearman(v2 axis, OOD | ID), all models, real_faults, random effects:
+  +0.346 [+0.141, +0.523]  k=4  tau(z)=0.13  -> adds information (positive)
+H2 (confirmatory) z(rho_real) - z(rho_clean), mean over groups, t CI (supported if lower > 0):
+  +0.385 [-0.048, +0.818]  k=4  positive 4/4  -> not supported
+  per group: purpleair_ca_north +0.66, purpleair_ca_south +0.40, purpleair_central_east +0.01, purpleair_west_other +0.47
+
+Secondary (exploratory, all reported):
+  P2_within  real +0.376 [+0.202, +0.527]  k=4  tau(z)=0.11  -> adds information (positive)
+             contrast +0.369 [+0.113, +0.624]  k=4  positive 4/4
+  P2b_band   real +0.395 [+0.093, +0.631]  k=4  tau(z)=0.20  -> inconclusive
+             contrast +0.324 [-0.099, +0.747]  k=4  positive 3/4
+  every signal on real_faults (random effects) | contrast real - clean (t):
+    v2_axis         +0.346 [+0.141, +0.523]  k=4  tau(z)=0.13  -> adds information (positive) | +0.385 [-0.048, +0.818]  k=4  positive 4/4
+    all9            +0.510 [+0.191, +0.732]  k=4  tau(z)=0.23  -> adds information (positive) | +0.644 [-0.014, +1.302]  k=4  positive 4/4
+    hardover        +0.675 [+0.395, +0.840]  k=4  tau(z)=0.25  -> adds information (positive) | +0.905 [+0.018, +1.791]  k=4  positive 4/4
+    stuck           +0.214 [-0.027, +0.432]  k=4  tau(z)=0.15  -> inconclusive | +0.271 [-0.122, +0.665]  k=4  positive 4/4
+    spike           +0.760 [+0.521, +0.888]  k=4  tau(z)=0.26  -> adds information (positive) | +1.002 [+0.040, +1.963]  k=4  positive 4/4
+    dropout         +0.013 [-0.169, +0.194]  k=4  tau(z)=0.11  -> inconclusive | +0.094 [+0.058, +0.131]  k=4  positive 4/4
+    bias            -0.226 [-0.502, +0.091]  k=4  tau(z)=0.20  -> inconclusive | -0.218 [-0.645, +0.208]  k=4  positive 0/4
+    gaussian        -0.265 [-0.569, +0.103]  k=4  tau(z)=0.23  -> inconclusive | -0.136 [-0.782, +0.510]  k=4  positive 2/4
+    disagree_ratio  +0.740 [+0.709, +0.768]  k=4  tau(z)=0.01  -> adds information (positive) | +0.812 [+0.526, +1.097]  k=4  positive 4/4
+    disagree_ood    +0.674 [+0.614, +0.726]  k=4  tau(z)=0.05  -> adds information (positive) | +0.361 [-0.289, +1.011]  k=4  positive 3/4
+  H3 z(disagree_ratio) - z(v2) on real_faults: +0.590 [+0.378, +0.801]  k=4  positive 4/4
+  dry days only (RH < 80 %): H1 +0.393 [+0.090, +0.630]  k=4  tau(z)=0.20  -> inconclusive
+                            H2 +0.440 [+0.001, +0.878]  k=4  positive 4/4
+  outside California: H1 +0.362 [+0.011, +0.633]  k=2  tau(z)=0.00  -> inconclusive
+                      H2 +0.241 [-2.692, +3.175]  k=2  positive 2/2
+
+per shift: dataset/shift, models, rho v2 / within / band / disagree_ratio, line r
+  purpleair_ca_north/real_faults                n= 600 reps=3  v2 +0.47 within +0.50 band +0.57 disagree +0.75 line -0.12
+  purpleair_ca_north/real_faults_dry            n= 600 reps=3  v2 +0.55 within +0.43 band +0.52 disagree +0.75 line -0.10
+  purpleair_ca_north/temporal_clean             n= 600 reps=3  v2 -0.15 within -0.01 band +0.17 disagree -0.03 line +0.95
+  purpleair_ca_south/real_faults                n= 600 reps=3  v2 +0.17 within +0.30 band +0.15 disagree +0.74 line +0.09
+  purpleair_ca_south/real_faults_dry            n= 600 reps=3  v2 +0.14 within +0.29 band +0.21 disagree +0.74 line +0.03
+  purpleair_ca_south/temporal_clean             n= 600 reps=3  v2 -0.22 within -0.10 band -0.25 disagree +0.26 line +0.76
+  purpleair_central_east/real_faults            n= 600 reps=3  v2 +0.37 within +0.40 band +0.43 disagree +0.76 line -0.33
+  purpleair_central_east/real_faults_dry        n= 600 reps=3  v2 +0.45 within +0.47 band +0.45 disagree +0.78 line -0.23
+  purpleair_central_east/temporal_clean         n= 600 reps=3  v2 +0.36 within +0.24 band +0.48 disagree +0.07 line +0.09
+  purpleair_west_other/real_faults              n= 600 reps=3  v2 +0.36 within +0.29 band +0.40 disagree +0.71 line -0.71
+  purpleair_west_other/real_faults_dry          n= 600 reps=3  v2 +0.39 within +0.30 band +0.55 disagree +0.71 line -0.67
+  purpleair_west_other/temporal_clean           n= 600 reps=3  v2 -0.10 within -0.03 band -0.06 disagree +0.25 line +0.97

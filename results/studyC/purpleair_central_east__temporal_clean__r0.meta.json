@@ -1,0 +1,86 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "purpleair_central_east",
+  "shift": "temporal_clean",
+  "note": "audit on the first 75 % of each sensor's clean pre-fault days, deploy on the later 25 % (both channels healthy)",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "87c310e0672d270d",
+  "07e565079a92d37c"
+ ],
+ "sizes": {
+  "train": 9659,
+  "cal": 3296,
+  "id": 3194,
+  "ood": 5396,
+  "n_cont": 4,
+  "d": 6
+ },
+ "task": "reg",
+ "source": {
+  "name": "purpleair_central_east__temporal_clean__source",
+  "task": "reg",
+  "n": 16149,
+  "d": 6,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 611,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Low-cost PM sensors / recorded channel faults"
+ },
+ "target": {
+  "name": "purpleair_central_east__temporal_clean__target",
+  "task": "reg",
+  "n": 5396,
+  "d": 6,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 217,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Low-cost PM sensors / recorded channel faults"
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 2,
+  "dataset": "beijing_pm25",
+  "shift": "urban_to_Huairou",
+  "note": "audit on the 8 urban stations, deploy at suburban station Huairou",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "18f3b469682516ba",
+  "1aee09f3b05dfe60"
+ ],
+ "sizes": {
+  "train": 20000,
+  "cal": 5000,
+  "id": 5000,
+  "ood": 8000,
+  "n_cont": 11,
+  "d": 12
+ },
+ "task": "reg",
+ "source": {
+  "name": "beijing_pm25__urban_to_Huairou__source",
+  "task": "reg",
+  "n": 64000,
+  "d": 12,
+  "n_cont": 11,
+  "grouped": true,
+  "n_groups": 11250,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Air quality / multi-site"
+ },
+ "target": {
+  "name": "beijing_pm25__urban_to_Huairou__target",
+  "task": "reg",
+  "n": 8000,
+  "d": 12,
+  "n_cont": 11,
+  "grouped": true,
+  "n_groups": 1437,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Air quality / multi-site"
+ }
+}

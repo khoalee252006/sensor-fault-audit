@@ -1,0 +1,73 @@
+Study C exploratory analyses (NOT registered). k = 4 PurpleAir groups, t(3) CIs.
+Kinds chosen on Study B Intel motes ['intel_lab_m41', 'intel_lab_m44', 'intel_lab_m47', 'intel_lab_m48', 'intel_lab_m9'] (largest recorded - clean contrast): ['hardover', 'spike']
+
+E1 OOD regret (geometric-mean excess loss vs hindsight-best) and difference vs id_only
+  [real_faults]
+    random             +610.3% [+245.6%, +1360.2%]   vs id_only  -25.0% [ -93.9%, +820.6%]  groups better than id_only 2/4
+    id_only            +847.1% [ -61.8%, +23369.5%]   vs id_only   +0.0% [  +0.0%,   +0.0%]  groups better than id_only 0/4
+    fault_q0.25        +382.9% [ -52.6%, +4815.4%]   vs id_only  -49.0% [ -83.3%,  +56.0%]  groups better than id_only 3/4
+    fault_q0.5         +381.0% [ -52.2%, +4737.1%]   vs id_only  -49.2% [ -83.5%,  +56.6%]  groups better than id_only 3/4
+    eps0.02_v2         +505.9% [ -70.9%, +12525.1%]   vs id_only  -36.0% [ -73.4%,  +53.7%]  groups better than id_only 3/4
+    eps0.02_all9       +425.5% [ -67.5%, +8400.2%]   vs id_only  -44.5% [ -80.5%,  +58.0%]  groups better than id_only 3/4
+    eps0.02_disagree   +413.0% [ -69.4%, +8515.1%]   vs id_only  -45.8% [ -78.9%,  +38.8%]  groups better than id_only 4/4
+    eps0.05_v2         +255.8% [ -45.3%, +2213.0%]   vs id_only  -62.4% [ -91.4%,  +63.9%]  groups better than id_only 4/4
+    eps0.05_all9       +229.5% [ -54.3%, +2273.2%]   vs id_only  -65.2% [ -92.8%,  +68.7%]  groups better than id_only 3/4
+    eps0.05_disagree   +289.4% [ -52.7%, +3107.1%]   vs id_only  -58.9% [ -88.5%,  +46.7%]  groups better than id_only 4/4
+    eps0.1_v2          +176.5% [ -44.8%, +1284.2%]   vs id_only  -70.8% [ -94.2%,  +46.4%]  groups better than id_only 4/4
+    eps0.1_all9        +111.3% [ -65.4%, +1190.3%]   vs id_only  -77.7% [ -96.0%,  +24.6%]  groups better than id_only 4/4
+    eps0.1_disagree    +238.9% [ -33.8%, +1634.2%]   vs id_only  -64.2% [ -93.1%,  +86.9%]  groups better than id_only 4/4
+    eps0.02_intel2     +503.7% [ -71.1%, +12514.3%]   vs id_only  -36.3% [ -73.8%,  +54.8%]  groups better than id_only 3/4
+    eps0.05_intel2     +220.6% [ -54.7%, +2166.6%]   vs id_only  -66.2% [ -93.1%,  +65.8%]  groups better than id_only 3/4
+    eps0.1_intel2      +156.5% [ -52.5%, +1285.6%]   vs id_only  -72.9% [ -94.3%,  +28.5%]  groups better than id_only 4/4
+  [temporal_clean]
+    random              +45.5% [  -1.3%, +114.6%]   vs id_only  +39.2% [  -2.7%,  +99.0%]  groups better than id_only 0/4
+    id_only              +4.6% [  -2.5%,  +12.2%]   vs id_only   +0.0% [  +0.0%,   +0.0%]  groups better than id_only 0/4
+    fault_q0.25          +3.4% [  -0.8%,   +7.7%]   vs id_only   -1.2% [  -4.1%,   +1.8%]  groups better than id_only 2/4
+    fault_q0.5           +5.0% [  -4.8%,  +15.8%]   vs id_only   +0.4% [  -3.4%,   +4.3%]  groups better than id_only 1/4
+    eps0.02_v2          +13.4% [  -6.3%,  +37.1%]   vs id_only   +8.4% [  -8.2%,  +28.0%]  groups better than id_only 1/4
+    eps0.02_all9         +9.3% [  -5.8%,  +26.8%]   vs id_only   +4.5% [ -11.7%,  +23.8%]  groups better than id_only 2/4
+    eps0.02_disagree    +60.9% [ -58.2%, +519.9%]   vs id_only  +53.8% [ -61.2%, +509.3%]  groups better than id_only 1/4
+    eps0.05_v2           +6.4% [  -0.1%,  +13.4%]   vs id_only   +1.8% [  -1.0%,   +4.6%]  groups better than id_only 1/4
+    eps0.05_all9         +5.8% [  -1.2%,  +13.2%]   vs id_only   +1.1% [  -1.3%,   +3.6%]  groups better than id_only 1/4
+    eps0.05_disagree    +34.2% [ -32.8%, +168.3%]   vs id_only  +28.3% [ -37.2%, +162.1%]  groups better than id_only 1/4
+    eps0.1_v2            +8.3% [  -0.7%,  +18.2%]   vs id_only   +3.6% [  +0.3%,   +6.9%]  groups better than id_only 0/4
+    eps0.1_all9          +6.9% [  -2.2%,  +16.9%]   vs id_only   +2.2% [  -2.2%,   +6.8%]  groups better than id_only 1/4
+    eps0.1_disagree     +34.9% [ -35.4%, +181.7%]   vs id_only  +29.0% [ -39.7%, +175.9%]  groups better than id_only 1/4
+    eps0.02_intel2       +4.2% [  -1.2%,   +9.9%]   vs id_only   -0.4% [  -2.8%,   +2.0%]  groups better than id_only 2/4
+    eps0.05_intel2       +6.3% [  -1.5%,  +14.7%]   vs id_only   +1.7% [  -1.6%,   +5.0%]  groups better than id_only 1/4
+    eps0.1_intel2        +7.3% [  -2.7%,  +18.3%]   vs id_only   +2.6% [  -1.5%,   +6.8%]  groups better than id_only 1/4
+  [real_faults_dry]
+    random             +592.9% [+198.7%, +1507.3%]   vs id_only  +60.0% [ -57.9%, +508.3%]  groups better than id_only 1/4
+    id_only            +333.1% [ -48.9%, +3570.4%]   vs id_only   +0.0% [  +0.0%,   +0.0%]  groups better than id_only 0/4
+    fault_q0.25        +191.1% [ +42.1%, +496.4%]   vs id_only  -32.8% [ -84.2%, +186.8%]  groups better than id_only 2/4
+    fault_q0.5         +187.3% [ +39.4%, +492.0%]   vs id_only  -33.7% [ -84.5%, +183.9%]  groups better than id_only 2/4
+    eps0.02_v2         +206.4% [ -31.7%, +1274.0%]   vs id_only  -29.3% [ -63.4%,  +36.8%]  groups better than id_only 4/4
+    eps0.02_all9       +222.7% [ -23.6%, +1263.9%]   vs id_only  -25.5% [ -65.7%,  +62.0%]  groups better than id_only 3/4
+    eps0.02_disagree   +275.3% [ -35.7%, +2092.3%]   vs id_only  -13.3% [ -40.9%,  +27.1%]  groups better than id_only 3/4
+    eps0.05_v2         +135.2% [  -4.3%, +478.1%]   vs id_only  -45.7% [ -85.4%, +101.6%]  groups better than id_only 3/4
+    eps0.05_all9       +237.7% [  -3.5%, +1081.5%]   vs id_only  -22.0% [ -87.0%, +367.3%]  groups better than id_only 2/4
+    eps0.05_disagree   +208.2% [ -20.3%, +1091.7%]   vs id_only  -28.9% [ -68.3%,  +59.6%]  groups better than id_only 3/4
+    eps0.1_v2          +246.1% [ -29.6%, +1601.8%]   vs id_only  -20.1% [ -65.4%,  +84.7%]  groups better than id_only 2/4
+    eps0.1_all9         +99.7% [ -47.1%, +653.0%]   vs id_only  -53.9% [ -86.3%,  +55.6%]  groups better than id_only 3/4
+    eps0.1_disagree    +204.3% [ -22.8%, +1099.7%]   vs id_only  -29.7% [ -67.8%,  +53.4%]  groups better than id_only 3/4
+    eps0.02_intel2     +212.2% [ -29.8%, +1288.2%]   vs id_only  -27.9% [ -66.0%,  +53.0%]  groups better than id_only 3/4
+    eps0.05_intel2     +157.9% [  +7.3%, +519.8%]   vs id_only  -40.5% [ -84.8%, +133.8%]  groups better than id_only 3/4
+    eps0.1_intel2      +144.0% [ -49.3%, +1075.3%]   vs id_only  -43.7% [ -85.6%, +119.7%]  groups better than id_only 3/4
+
+E2 Spearman over the 9 kinds, Intel vs PurpleAir rho on recorded faults: +0.58 (p = 0.099)
+   top 2 Intel ['hardover', 'spike']  top 2 PurpleAir ['spike', 'hardover']
+   rho of the Intel-chosen signal on PurpleAir recorded faults: +0.700 [+0.514, +0.886]
+     gaussian    Intel +0.11   PurpleAir -0.26
+     bias        Intel +0.00   PurpleAir -0.23
+     dropout     Intel +0.15   PurpleAir +0.01
+     spike       Intel +0.56   PurpleAir +0.76
+     stuck       Intel +0.33   PurpleAir +0.21
+     saturation  Intel -0.02   PurpleAir +0.12
+     quantize    Intel +0.12   PurpleAir -0.34
+     gain        Intel +0.07   PurpleAir -0.13
+     hardover    Intel +0.58   PurpleAir +0.68
+
+E3 conformal coverage (target 0.90), mean over models, then over groups
+  [real_faults] id 0.899 [0.882, 0.915]  fault 0.862 [0.845, 0.879]  ood 0.382 [0.141, 0.623]
+  [temporal_clean] id 0.899 [0.875, 0.923]  fault 0.860 [0.821, 0.899]  ood 0.902 [0.878, 0.926]
+  [real_faults_dry] id 0.901 [0.889, 0.913]  fault 0.866 [0.849, 0.884]  ood 0.400 [0.131, 0.669]

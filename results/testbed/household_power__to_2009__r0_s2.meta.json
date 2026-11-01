@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 2,
+  "dataset": "household_power",
+  "shift": "to_2009",
+  "note": "audit on Dec 2006 - Dec 2007, deploy on 2009",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "734dce828cb4e11d",
+  "39e7969b626a9bbf"
+ ],
+ "sizes": {
+  "train": 20000,
+  "cal": 5000,
+  "id": 5000,
+  "ood": 20000,
+  "n_cont": 5,
+  "d": 7
+ },
+ "task": "reg",
+ "source": {
+  "name": "household_power__to_2009__source",
+  "task": "reg",
+  "n": 36251,
+  "d": 7,
+  "n_cont": 5,
+  "grouped": true,
+  "n_groups": 380,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Residential smart meter"
+ },
+ "target": {
+  "name": "household_power__to_2009__target",
+  "task": "reg",
+  "n": 34758,
+  "d": 7,
+  "n_cont": 5,
+  "grouped": true,
+  "n_groups": 365,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Residential smart meter"
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 1,
+  "dataset": "intel_lab_m44",
+  "shift": "real_faults",
+  "note": "audit on days 0-11, deploy on days 12-26 when >= 1 input mote has a RECORDED battery fault (same window as temporal_clean)",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "d742cd87a414e867",
+  "6aab69fe0bca5e9f"
+ ],
+ "sizes": {
+  "train": 1943,
+  "cal": 381,
+  "id": 804,
+  "ood": 1101,
+  "n_cont": 18,
+  "d": 19
+ },
+ "task": "reg",
+ "source": {
+  "name": "intel_lab_m44__real_faults__source",
+  "task": "reg",
+  "n": 3128,
+  "d": 19,
+  "n_cont": 18,
+  "grouped": true,
+  "n_groups": 12,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Wireless sensor network / real faults"
+ },
+ "target": {
+  "name": "intel_lab_m44__real_faults__target",
+  "task": "reg",
+  "n": 1101,
+  "d": 19,
+  "n_cont": 18,
+  "grouped": true,
+  "n_groups": 9,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Wireless sensor network / real faults"
+ }
+}

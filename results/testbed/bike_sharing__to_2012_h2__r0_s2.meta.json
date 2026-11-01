@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 2,
+  "dataset": "bike_sharing",
+  "shift": "to_2012_h2",
+  "note": "audit on 2011, deploy on Jul-Dec 2012",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "b2cb5176bf92e306",
+  "e18875d2d29418bb"
+ ],
+ "sizes": {
+  "train": 5191,
+  "cal": 1720,
+  "id": 1734,
+  "ood": 4376,
+  "n_cont": 4,
+  "d": 10
+ },
+ "task": "reg",
+ "source": {
+  "name": "bike_sharing__to_2012_h2__source",
+  "task": "reg",
+  "n": 8645,
+  "d": 10,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 365,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Urban mobility demand"
+ },
+ "target": {
+  "name": "bike_sharing__to_2012_h2__target",
+  "task": "reg",
+  "n": 4376,
+  "d": 10,
+  "n_cont": 4,
+  "grouped": true,
+  "n_groups": 184,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Urban mobility demand"
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 1,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none",
+   "gaussian",
+   "mixed"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "dataset": "uav_power_v1",
+  "shift": "leave_speed_out",
+  "note": "fastest commanded speed never flown during the audit",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "5f2f662ae595e0d2",
+  "b57a6985a88c4bf3"
+ ],
+ "sizes": {
+  "train": 20000,
+  "cal": 5000,
+  "id": 5000,
+  "ood": 20000,
+  "n_cont": 6,
+  "d": 12
+ },
+ "task": "reg",
+ "source": {
+  "name": "uav_power_v1__leave_speed_out__source",
+  "task": "reg",
+  "n": 147606,
+  "d": 12,
+  "n_cont": 6,
+  "grouped": true,
+  "n_groups": 151,
+  "has_gt": false,
+  "family": "real",
+  "domain": "UAV / sensor"
+ },
+ "target": {
+  "name": "uav_power_v1__leave_speed_out__target",
+  "task": "reg",
+  "n": 29858,
+  "d": 12,
+  "n_cont": 6,
+  "grouped": true,
+  "n_groups": 37,
+  "has_gt": false,
+  "family": "real",
+  "domain": "UAV / sensor"
+ }
+}

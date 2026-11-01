@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 1,
+  "dataset": "cmapss_fd002",
+  "shift": "leave_condition1_out",
+  "note": "operating condition 1 never seen in the audit",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "8ff77e9b041e5b64",
+  "2795b979a03be0a4"
+ ],
+ "sizes": {
+  "train": 20000,
+  "cal": 5000,
+  "id": 5000,
+  "ood": 8096,
+  "n_cont": 24,
+  "d": 24
+ },
+ "task": "reg",
+ "source": {
+  "name": "cmapss_fd002__leave_condition1_out__source",
+  "task": "reg",
+  "n": 45663,
+  "d": 24,
+  "n_cont": 24,
+  "grouped": true,
+  "n_groups": 260,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Aero-engine / sensor"
+ },
+ "target": {
+  "name": "cmapss_fd002__leave_condition1_out__target",
+  "task": "reg",
+  "n": 8096,
+  "d": 24,
+  "n_cont": 24,
+  "grouped": true,
+  "n_groups": 260,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Aero-engine / sensor"
+ }
+}

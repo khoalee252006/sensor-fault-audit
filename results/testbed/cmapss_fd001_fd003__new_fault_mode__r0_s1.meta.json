@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 1,
+  "dataset": "cmapss_fd001_fd003",
+  "shift": "new_fault_mode",
+  "note": "deploy on engines with an additional fault mode",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "400015454e601ef3",
+  "2202cbb4c891d2a6"
+ ],
+ "sizes": {
+  "train": 12462,
+  "cal": 4337,
+  "id": 3832,
+  "ood": 20000,
+  "n_cont": 17,
+  "d": 17
+ },
+ "task": "reg",
+ "source": {
+  "name": "cmapss_fd001_fd003__new_fault_mode__source",
+  "task": "reg",
+  "n": 20631,
+  "d": 17,
+  "n_cont": 17,
+  "grouped": true,
+  "n_groups": 100,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Aero-engine / sensor"
+ },
+ "target": {
+  "name": "cmapss_fd001_fd003__new_fault_mode__target",
+  "task": "reg",
+  "n": 24720,
+  "d": 17,
+  "n_cont": 17,
+  "grouped": true,
+  "n_groups": 100,
+  "has_gt": false,
+  "family": "real",
+  "domain": "Aero-engine / sensor"
+ }
+}

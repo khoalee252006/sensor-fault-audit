@@ -1,0 +1,85 @@
+{
+ "cfg": {
+  "study": "B",
+  "testbed_seed": 0,
+  "rep": 0,
+  "families": [
+   "Linear",
+   "Spline",
+   "KNN",
+   "RandForest",
+   "ExtraTrees",
+   "HistGB",
+   "LightGBM",
+   "XGBoost",
+   "CatBoost",
+   "MLP"
+  ],
+  "variants": [
+   "none"
+  ],
+  "max_train": 20000,
+  "kinds": [
+   "gaussian",
+   "bias",
+   "dropout",
+   "spike",
+   "stuck",
+   "saturation",
+   "quantize",
+   "gain",
+   "hardover"
+  ],
+  "single_kinds": [
+   "bias",
+   "gain",
+   "spike",
+   "stuck",
+   "hardover",
+   "dropout"
+  ],
+  "alpha": 0.1,
+  "seed_offset": 2,
+  "dataset": "uav_power_v1",
+  "shift": "leave_payload_out",
+  "note": "heaviest payload never flown during the audit",
+  "n_rows_cap": null
+ },
+ "fingerprint": [
+  "0e97605de4ba7cf8",
+  "60498d3be9c7abe0"
+ ],
+ "sizes": {
+  "train": 20000,
+  "cal": 5000,
+  "id": 5000,
+  "ood": 20000,
+  "n_cont": 6,
+  "d": 12
+ },
+ "task": "reg",
+ "source": {
+  "name": "uav_power_v1__leave_payload_out__source",
+  "task": "reg",
+  "n": 118142,
+  "d": 12,
+  "n_cont": 6,
+  "grouped": true,
+  "n_groups": 125,
+  "has_gt": false,
+  "family": "real",
+  "domain": "UAV / sensor"
+ },
+ "target": {
+  "name": "uav_power_v1__leave_payload_out__target",
+  "task": "reg",
+  "n": 59322,
+  "d": 12,
+  "n_cont": 6,
+  "grouped": true,
+  "n_groups": 63,
+  "has_gt": false,
+  "family": "real",
+  "domain": "UAV / sensor"
+ }
+}
