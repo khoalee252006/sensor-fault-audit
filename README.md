@@ -1,4 +1,6 @@
-# When does a synthetic sensor-fault audit predict deployment loss?
+# Robustness to Synthetic Sensor Faults as a Predictor of Deployment Loss
+
+Two pre-registered studies on natural shift and recorded sensor failures.
 
 Anonymised code and records for the two pre-registered studies of the submission.
 Study 1 in the paper is "Study B" in the code and registration; Study 2 is "Study C".
