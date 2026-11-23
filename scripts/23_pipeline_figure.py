@@ -3,7 +3,8 @@
   b  model population      the 600 models of one shift, coloured by family
   c  synthetic-fault audit schematic trace with the injected fault kinds
   d  estimand              REAL data: rank residuals of the registered axis and of OOD loss given ID loss,
-                           600 models of PurpleAir CA north, recorded faults, replicate 0
+                           600 models of PurpleAir central and east, recorded faults, replicate 0 (a typical case:
+                           its three replicates give 0.40, 0.37 and 0.33)
   e  registered verdict    REAL data: Study 1 P1 and Study 2 H1 with the region of practical equivalence
 Schematic panels carry no axis values. Real panels are computed with the frozen Study 1 analysis functions.
 usage: python scripts/23_pipeline_figure.py"""
@@ -71,7 +72,7 @@ panel(0, "Shifts", f"{len({s['dataset'] for s in B['shifts']})} datasets, {B['st
       f"{len(C['units'])} PurpleAir groups with recorded faults")
 
 # b  model population: 600 models of one shift as a dot grid, coloured by family
-R, P = TB.load_records("results/studyC/purpleair_ca_north__real_faults__r0")
+R, P = TB.load_records("results/studyC/purpleair_central_east__real_faults__r0")
 fam = [r["family"] for r in R if r.get("ok")]
 order = sorted(range(len(fam)), key=lambda i: (fam[i] in FAM_KNN, fam[i] not in FAM_SMOOTH, fam[i]))
 col = lambda f: C_SMOOTH if f in FAM_SMOOTH else (C_KNN if f in FAM_KNN else C_TREE)
@@ -102,7 +103,7 @@ ax.text(3.3, 1.15, r"loss under each fault $\rightarrow$ signal $d$", fontsize=6
 panel(2, "Synthetic-fault audit", "9 kinds x 3 severities on held-out\nsource rows; 4 kinds form the registered axis")
 
 # d  estimand on real data: rank residuals given ID loss
-meta = json.load(open("results/studyC/purpleair_ca_north__real_faults__r0.meta.json"))
+meta = json.load(open("results/studyC/purpleair_central_east__real_faults__r0.meta.json"))
 x, y, d, mm, _ = A.shift_tables(R, P, meta["task"])
 rx = rankdata(x)
 

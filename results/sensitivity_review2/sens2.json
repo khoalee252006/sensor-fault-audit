@@ -1,0 +1,1116 @@
+{
+ "note": "UNREGISTERED sensitivity analyses after a pre-submission review; see the script docstring",
+ "study1": {
+  "P1|linear|d|all": {
+   "bootstrap": {
+    "est": 0.22386752130322884,
+    "lo": 0.08651186866333298,
+    "hi": 0.34279301349279645,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.260087494023274,
+    "lo": 0.1462020636940684,
+    "hi": 0.3671691243566722,
+    "tau": 0.15836023426710724,
+    "Q": 74.27270337716178,
+    "pi_lo": -0.10622422801580807,
+    "pi_hi": 0.5642393958712842,
+    "verdict_counts": {
+     "adds information (positive)": 6,
+     "inconclusive": 6
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|linear|d|all": {
+   "bootstrap": {
+    "est": 0.10852117582317196,
+    "lo": -0.018770043036851956,
+    "hi": 0.24042980449391035,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.11231584456514987,
+    "lo": -0.07312799202849617,
+    "hi": 0.2902527427873656,
+    "tau": 0.28342203547086514,
+    "Q": 423.6539527789993,
+    "pi_lo": -0.49766728927158627,
+    "pi_hi": 0.647965705623726,
+    "verdict_counts": {
+     "adds information (positive)": 2,
+     "inconclusive": 9,
+     "opposite sign": 1
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|spline|d|all": {
+   "bootstrap": {
+    "est": 0.2565518259036254,
+    "lo": 0.11279899557609,
+    "hi": 0.38601778747776355,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.2929337868570576,
+    "lo": 0.16087765219529526,
+    "hi": 0.4146860876034936,
+    "tau": 0.1918084416495886,
+    "Q": 90.3787568099008,
+    "pi_lo": -0.14724835611174428,
+    "pi_hi": 0.6362641292935401,
+    "verdict_counts": {
+     "adds information (positive)": 6,
+     "inconclusive": 6
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|spline|d|all": {
+   "bootstrap": {
+    "est": 0.15134663875444293,
+    "lo": 0.011236702637630037,
+    "hi": 0.29355405659453637,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.15299671058768569,
+    "lo": -0.08778335719143505,
+    "hi": 0.37688588749133173,
+    "tau": 0.37392371391104695,
+    "Q": 697.8258065236353,
+    "pi_lo": -0.6133539563275016,
+    "pi_hi": 0.7709621543848251,
+    "verdict_counts": {
+     "adds information (positive)": 3,
+     "inconclusive": 8,
+     "opposite sign": 1
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|bins|d|all": {
+   "bootstrap": {
+    "est": 0.22575206903912304,
+    "lo": 0.0694940483416254,
+    "hi": 0.36446681443216195,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.26002105044117657,
+    "lo": 0.12309767004198895,
+    "hi": 0.38722959982227606,
+    "tau": 0.19685213146347613,
+    "Q": 109.16737315337191,
+    "pi_lo": -0.1931113072923731,
+    "pi_hi": 0.6217353332507388,
+    "verdict_counts": {
+     "adds information (positive)": 6,
+     "inconclusive": 6
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|bins|d|all": {
+   "bootstrap": {
+    "est": 0.1061994501127058,
+    "lo": -0.040797018078790416,
+    "hi": 0.2589813183589543,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.10679841479640734,
+    "lo": -0.129918203767584,
+    "hi": 0.33199718007896234,
+    "tau": 0.3670159662943894,
+    "Q": 733.1570725859337,
+    "pi_lo": -0.632319315187941,
+    "pi_hi": 0.7441366314992939,
+    "verdict_counts": {
+     "adds information (positive)": 2,
+     "inconclusive": 9,
+     "opposite sign": 1
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|linear|m|all": {
+   "bootstrap": {
+    "est": 0.3027963329007517,
+    "lo": 0.16515782174304702,
+    "hi": 0.4299775610190581,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.3303229339528736,
+    "lo": 0.18125126059217328,
+    "hi": 0.4645557626860605,
+    "tau": 0.2227901437779438,
+    "Q": 81.88357198545764,
+    "pi_lo": -0.177061112935614,
+    "pi_hi": 0.6989928449521228,
+    "verdict_counts": {
+     "adds information (positive)": 8,
+     "inconclusive": 4
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|linear|m|all": {
+   "bootstrap": {
+    "est": 0.19141977700566162,
+    "lo": 0.07082683167701963,
+    "hi": 0.3233367154167341,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.20045909909704393,
+    "lo": 0.04343299400432367,
+    "hi": 0.3478197742318852,
+    "tau": 0.2403878285218508,
+    "Q": 309.8801835436046,
+    "pi_lo": -0.3419409478016333,
+    "pi_hi": 0.6426707138191936,
+    "verdict_counts": {
+     "adds information (positive)": 5,
+     "inconclusive": 7
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|spline|m|all": {
+   "bootstrap": {
+    "est": 0.28421255155312497,
+    "lo": 0.13346243021298904,
+    "hi": 0.42310529741181097,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.32237414909284096,
+    "lo": 0.17364246541988954,
+    "hi": 0.4567278183671732,
+    "tau": 0.21916844772001473,
+    "Q": 84.94678031055585,
+    "pi_lo": -0.17793284241544696,
+    "pi_hi": 0.6902514304603755,
+    "verdict_counts": {
+     "adds information (positive)": 7,
+     "inconclusive": 5
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|spline|m|all": {
+   "bootstrap": {
+    "est": 0.18519522129263738,
+    "lo": 0.054865725988443914,
+    "hi": 0.3233979050059132,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.19015356646527146,
+    "lo": 0.006980444259024502,
+    "hi": 0.3609801294005422,
+    "tau": 0.2813410490082959,
+    "Q": 294.6551049411915,
+    "pi_lo": -0.4316302280339964,
+    "pi_hi": 0.6894419870693431,
+    "verdict_counts": {
+     "adds information (positive)": 3,
+     "inconclusive": 9
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|bins|m|all": {
+   "bootstrap": {
+    "est": 0.30338285408295856,
+    "lo": 0.1625743061423787,
+    "hi": 0.43092465750214715,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.3349029327445368,
+    "lo": 0.1856148894577689,
+    "hi": 0.46907921721587414,
+    "tau": 0.22263939277008116,
+    "Q": 84.98894344238398,
+    "pi_lo": -0.17195205460983998,
+    "pi_hi": 0.7015561607681409,
+    "verdict_counts": {
+     "adds information (positive)": 8,
+     "inconclusive": 4
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|bins|m|all": {
+   "bootstrap": {
+    "est": 0.2111547707342731,
+    "lo": 0.0927834991445911,
+    "hi": 0.33915791861077854,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.21844321334736483,
+    "lo": 0.06585479106755009,
+    "hi": 0.36104865129580055,
+    "tau": 0.23423150117340358,
+    "Q": 215.83721115853146,
+    "pi_lo": -0.31246122729321,
+    "pi_hi": 0.645363748810751,
+    "verdict_counts": {
+     "adds information (positive)": 5,
+     "inconclusive": 6,
+     "practically no added information (CI inside ROPE)": 1
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|linear|d|none": {
+   "bootstrap": {
+    "est": 0.2424434744892604,
+    "lo": 0.08291250338965689,
+    "hi": 0.3787464010197478,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.27102288745092157,
+    "lo": 0.11073575525599094,
+    "hi": 0.4175683433344701,
+    "tau": 0.2386845231237295,
+    "Q": 131.31612878585315,
+    "pi_lo": -0.27291493567856495,
+    "pi_hi": 0.6836556038186475,
+    "verdict_counts": {
+     "adds information (positive)": 5,
+     "inconclusive": 7
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|linear|d|none": {
+   "bootstrap": {
+    "est": 0.12494741043578975,
+    "lo": -0.014509242952155442,
+    "hi": 0.2633583972436044,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.13656839452454797,
+    "lo": -0.011613682464201629,
+    "hi": 0.2788810424276902,
+    "tau": 0.22381665898892245,
+    "Q": 227.31369364576634,
+    "pi_lo": -0.3658230141922655,
+    "pi_hi": 0.5773285231833949,
+    "verdict_counts": {
+     "adds information (positive)": 3,
+     "inconclusive": 9
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|spline|d|none": {
+   "bootstrap": {
+    "est": 0.2757230983468587,
+    "lo": 0.10846400182817646,
+    "hi": 0.42101253025957913,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.3021769855912467,
+    "lo": 0.121323205649028,
+    "hi": 0.46361280680529543,
+    "tau": 0.2749346898612684,
+    "Q": 110.7162575846546,
+    "pi_lo": -0.31866699408561466,
+    "pi_hi": 0.7415840702058037,
+    "verdict_counts": {
+     "adds information (positive)": 6,
+     "inconclusive": 6
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|spline|d|none": {
+   "bootstrap": {
+    "est": 0.20553398281472,
+    "lo": 0.05416045601554103,
+    "hi": 0.35132135401058545,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.21781488720594275,
+    "lo": 0.07114239636990477,
+    "hi": 0.35526743591296217,
+    "tau": 0.22511477841170305,
+    "Q": 195.18613208212417,
+    "pi_lo": -0.29381497223997594,
+    "pi_hi": 0.632431812520786,
+    "verdict_counts": {
+     "adds information (positive)": 5,
+     "inconclusive": 7
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|bins|d|none": {
+   "bootstrap": {
+    "est": 0.23579393917979388,
+    "lo": 0.056946849719257155,
+    "hi": 0.3897847647658048,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.2567513243936765,
+    "lo": 0.06485937945494032,
+    "hi": 0.4303320434359345,
+    "tau": 0.29035085151153656,
+    "Q": 138.813915083437,
+    "pi_lo": -0.39233609252641916,
+    "pi_hi": 0.735136247302817,
+    "verdict_counts": {
+     "adds information (positive)": 6,
+     "inconclusive": 6
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P2|bins|d|none": {
+   "bootstrap": {
+    "est": 0.12097479164260852,
+    "lo": -0.03363696808505389,
+    "hi": 0.2732707564829002,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.12549771277996122,
+    "lo": -0.05546649226555635,
+    "hi": 0.2984791689364024,
+    "tau": 0.2772459682021159,
+    "Q": 282.2137015890611,
+    "pi_lo": -0.47644857836050575,
+    "pi_hi": 0.6473395158964169,
+    "verdict_counts": {
+     "adds information (positive)": 3,
+     "inconclusive": 8,
+     "opposite sign": 1
+    },
+    "verdict": "inconclusive"
+   }
+  },
+  "P1|linear|m|none": {
+   "bootstrap": {
+    "est": 0.3216637841007426,
+    "lo": 0.17011838232762272,
+    "hi": 0.45843591354389324,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.35619968306607896,
+    "lo": 0.19011588304566457,
+    "hi": 0.5024631143314376,
+    "tau": 0.25148146172518593,
+    "Q": 83.94163025683957,
+    "pi_lo": -0.21338507792236086,
+    "pi_hi": 0.7450646053516804,
+    "verdict_counts": {
+     "adds information (positive)": 6,
+     "inconclusive": 6
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|linear|m|none": {
+   "bootstrap": {
+    "est": 0.228800554175299,
+    "lo": 0.09976802348089547,
+    "hi": 0.34599437306137915,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "inconclusive"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.2493896392224612,
+    "lo": 0.11508937991470408,
+    "hi": 0.37473653185085365,
+    "tau": 0.20170550893612568,
+    "Q": 175.71038895913335,
+    "pi_lo": -0.21292029863117895,
+    "pi_hi": 0.6204596324224599,
+    "verdict_counts": {
+     "adds information (positive)": 5,
+     "inconclusive": 7
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P1|spline|m|none": {
+   "bootstrap": {
+    "est": 0.29359153839229457,
+    "lo": 0.12842216335586845,
+    "hi": 0.4394833144105709,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.33405894615706533,
+    "lo": 0.15345521511643365,
+    "hi": 0.4930660671752843,
+    "tau": 0.2708508536985246,
+    "Q": 109.37643417383605,
+    "pi_lo": -0.2792358664035882,
+    "pi_hi": 0.7537721126518917,
+    "verdict_counts": {
+     "adds information (positive)": 7,
+     "inconclusive": 5
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|spline|m|none": {
+   "bootstrap": {
+    "est": 0.2535096832803973,
+    "lo": 0.11999496051209235,
+    "hi": 0.376465302532283,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.2718713947233872,
+    "lo": 0.13246664103605027,
+    "hi": 0.4007291167244215,
+    "tau": 0.2130804131230084,
+    "Q": 158.59477214789672,
+    "pi_lo": -0.21485254904401055,
+    "pi_hi": 0.6504164515538602,
+    "verdict_counts": {
+     "adds information (positive)": 7,
+     "inconclusive": 5
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P1|bins|m|none": {
+   "bootstrap": {
+    "est": 0.3151929822688092,
+    "lo": 0.16468010501857705,
+    "hi": 0.45157376907879243,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.34794436161642045,
+    "lo": 0.172089042950095,
+    "hi": 0.5023074213525548,
+    "tau": 0.26889433081962016,
+    "Q": 112.85291861461789,
+    "pi_lo": -0.25983136185391864,
+    "pi_hi": 0.7582706582732099,
+    "verdict_counts": {
+     "adds information (positive)": 7,
+     "inconclusive": 5
+    },
+    "verdict": "adds information (positive)"
+   }
+  },
+  "P2|bins|m|none": {
+   "bootstrap": {
+    "est": 0.27952707516024616,
+    "lo": 0.16230568906900944,
+    "hi": 0.3887998620082532,
+    "n_shifts": 60,
+    "n_domains": 12,
+    "verdict": "adds information (positive)"
+   },
+   "random_effects": {
+    "k": 12,
+    "est": 0.2939227254815778,
+    "lo": 0.15693023116608915,
+    "hi": 0.41981812675917074,
+    "tau": 0.20825167709403034,
+    "Q": 138.7472571661877,
+    "pi_lo": -0.181667670535051,
+    "pi_hi": 0.6580779651625204,
+    "verdict_counts": {
+     "adds information (positive)": 7,
+     "inconclusive": 5
+    },
+    "verdict": "adds information (positive)"
+   }
+  }
+ },
+ "study2": {
+  "P1|linear|d|all": {
+   "k": 4,
+   "est": 0.3461887275557653,
+   "lo": 0.1410994970143625,
+   "hi": 0.5227866149109848,
+   "tau": 0.13144316834929037,
+   "Q": 33.94365595170851,
+   "pi_lo": -0.27040690679205254,
+   "pi_hi": 0.7613911311508231,
+   "verdict_counts": {
+    "adds information (positive)": 3,
+    "inconclusive": 1
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.470077347844232,
+    "purpleair_ca_south": 0.17496935921847975,
+    "purpleair_central_east": 0.3656109202671352,
+    "purpleair_west_other": 0.3575924075457187
+   }
+  },
+  "P2|linear|d|all": {
+   "k": 4,
+   "est": 0.3762394880792424,
+   "lo": 0.2021471377954595,
+   "hi": 0.5272823001439195,
+   "tau": 0.11264104248730036,
+   "Q": 25.724215974652815,
+   "pi_lo": -0.15210660701690795,
+   "pi_hi": 0.7373467306626561,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.5019109852527489,
+    "purpleair_ca_south": 0.2957787718251046,
+    "purpleair_central_east": 0.4031870361761985,
+    "purpleair_west_other": 0.28993345410149046
+   }
+  },
+  "P1|spline|d|all": {
+   "k": 4,
+   "est": 0.27579662434523067,
+   "lo": 0.09441085786937498,
+   "hi": 0.4394596558057489,
+   "tau": 0.11112362634037903,
+   "Q": 25.1160924528858,
+   "pi_lo": -0.2530205313851586,
+   "pi_hi": 0.6777232389524791,
+   "verdict_counts": {
+    "adds information (positive)": 3,
+    "inconclusive": 1
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.3679379895126203,
+    "purpleair_ca_south": 0.11185470718636552,
+    "purpleair_central_east": 0.30778373419586147,
+    "purpleair_west_other": 0.30593220781793984
+   }
+  },
+  "P2|spline|d|all": {
+   "k": 4,
+   "est": 0.3664448589250598,
+   "lo": 0.19032428038507057,
+   "hi": 0.5197133863618697,
+   "tau": 0.11326607548855469,
+   "Q": 25.97710410713293,
+   "pi_lo": -0.16607315878298315,
+   "pi_hi": 0.7334928710994039,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.48831255566018295,
+    "purpleair_ca_south": 0.2770834173431728,
+    "purpleair_central_east": 0.40532190771827964,
+    "purpleair_west_other": 0.28110199119984974
+   }
+  },
+  "P1|bins|d|all": {
+   "k": 4,
+   "est": 0.29182814716605315,
+   "lo": 0.14510531490462708,
+   "hi": 0.4259921945223503,
+   "tau": 0.08799698025324774,
+   "Q": 16.86855214383964,
+   "pi_lo": -0.13104902489560916,
+   "pi_hi": 0.6248570138672185,
+   "verdict_counts": {
+    "adds information (positive)": 3,
+    "inconclusive": 1
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.3754658274162835,
+    "purpleair_ca_south": 0.16324350618298616,
+    "purpleair_central_east": 0.3058249231391387,
+    "purpleair_west_other": 0.31567192217450607
+   }
+  },
+  "P2|bins|d|all": {
+   "k": 4,
+   "est": 0.37845047036638796,
+   "lo": 0.20673759017350357,
+   "hi": 0.5275460948496108,
+   "tau": 0.1111604349337709,
+   "Q": 25.130746349745216,
+   "pi_lo": -0.14270829419831546,
+   "pi_hi": 0.7353089792379337,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.49130143358981576,
+    "purpleair_ca_south": 0.27795208405739186,
+    "purpleair_central_east": 0.4251655844485377,
+    "purpleair_west_other": 0.3056889558109731
+   }
+  },
+  "P1|linear|m|all": {
+   "k": 4,
+   "est": 0.15216842466930602,
+   "lo": -0.14059124711922383,
+   "hi": 0.42045756870403056,
+   "tau": 0.18074594755752202,
+   "Q": 61.5103537272135,
+   "pi_lo": -0.6172608559142315,
+   "pi_hi": 0.7728178722562193,
+   "verdict_counts": {
+    "adds information (positive)": 3,
+    "inconclusive": 1
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.25207788676075643,
+    "purpleair_ca_south": -0.12251938830359599,
+    "purpleair_central_east": 0.21510625573955447,
+    "purpleair_west_other": 0.2546943089733883
+   }
+  },
+  "P2|linear|m|all": {
+   "k": 4,
+   "est": 0.23424363843394116,
+   "lo": 0.17182866655361373,
+   "hi": 0.2947855523583915,
+   "tau": 0.0,
+   "Q": 2.278045848881901,
+   "pi_lo": 0.14949793901843725,
+   "pi_hi": 0.31557292066431936,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.26126715789237087,
+    "purpleair_ca_south": 0.2017069759335683,
+    "purpleair_central_east": 0.2649301962446234,
+    "purpleair_west_other": 0.20822631882661183
+   }
+  },
+  "P1|spline|m|all": {
+   "k": 4,
+   "est": 0.2327727446691957,
+   "lo": -0.08038627621605525,
+   "hi": 0.504107741482039,
+   "tau": 0.1954045501566384,
+   "Q": 71.38564235545553,
+   "pi_lo": -0.6087868259528575,
+   "pi_hi": 0.8278389529747837,
+   "verdict_counts": {
+    "adds information (positive)": 3,
+    "inconclusive": 1
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.34354659293910816,
+    "purpleair_ca_south": -0.060673492861108756,
+    "purpleair_central_east": 0.2992619869707117,
+    "purpleair_west_other": 0.3296248985432786
+   }
+  },
+  "P2|spline|m|all": {
+   "k": 4,
+   "est": 0.31361868142583665,
+   "lo": 0.2490291201277608,
+   "hi": 0.375430873433364,
+   "tau": 0.016430354043469538,
+   "Q": 3.4834921523828166,
+   "pi_lo": 0.2033593057194235,
+   "pi_hi": 0.4160233090435285,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.3552538090956015,
+    "purpleair_ca_south": 0.2664848593143464,
+    "purpleair_central_east": 0.33543240898814736,
+    "purpleair_west_other": 0.2956612845452348
+   }
+  },
+  "P1|bins|m|all": {
+   "k": 4,
+   "est": 0.20533922427952414,
+   "lo": -0.08755508402969384,
+   "hi": 0.46555547768674665,
+   "tau": 0.18151402928639385,
+   "Q": 62.00869100455729,
+   "pi_lo": -0.5845211521372866,
+   "pi_hi": 0.795378242782729,
+   "verdict_counts": {
+    "adds information (positive)": 3,
+    "inconclusive": 1
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.3304788764084057,
+    "purpleair_ca_south": -0.06601308311240518,
+    "purpleair_central_east": 0.28720202129296807,
+    "purpleair_west_other": 0.2546989909316929
+   }
+  },
+  "P2|bins|m|all": {
+   "k": 4,
+   "est": 0.26512779694932653,
+   "lo": 0.1751535001369428,
+   "hi": 0.3507102947249602,
+   "tau": 0.043153202996916065,
+   "Q": 6.335198281647445,
+   "pi_lo": 0.04609346301810329,
+   "pi_hi": 0.4598378697995445,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.3307369941330902,
+    "purpleair_ca_south": 0.22253984329527524,
+    "purpleair_central_east": 0.28861526849392205,
+    "purpleair_west_other": 0.21597121519521179
+   }
+  },
+  "P1|linear|d|none": {
+   "k": 4,
+   "est": 0.1847854175118094,
+   "lo": -0.23118584553996058,
+   "hi": 0.5436394421351106,
+   "tau": 0.2556998124771518,
+   "Q": 41.6409949136027,
+   "pi_lo": -0.7828256786238722,
+   "pi_hi": 0.8909456205066508,
+   "verdict_counts": {
+    "adds information (positive)": 2,
+    "inconclusive": 2
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.3477580078681004,
+    "purpleair_ca_south": -0.19636656078962192,
+    "purpleair_central_east": 0.21944148176869138,
+    "purpleair_west_other": 0.34584932416123
+   }
+  },
+  "P2|linear|d|none": {
+   "k": 4,
+   "est": 0.4051588582488651,
+   "lo": 0.29024633822069296,
+   "hi": 0.5085529796108728,
+   "tau": 0.041212425162552954,
+   "Q": 4.003792216777406,
+   "pi_lo": 0.17731686535779717,
+   "pi_hi": 0.5917794893856256,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.35042028389859314,
+    "purpleair_ca_south": 0.33912103302540375,
+    "purpleair_central_east": 0.44997579276067784,
+    "purpleair_west_other": 0.47424331298402916
+   }
+  },
+  "P1|spline|d|none": {
+   "k": 4,
+   "est": 0.06827768871227237,
+   "lo": -0.4263248737422881,
+   "hi": 0.5314507283353603,
+   "tau": 0.3213655375054643,
+   "Q": 64.03600293944001,
+   "pi_lo": -0.9024244226740797,
+   "pi_hi": 0.9248988970749797,
+   "verdict_counts": {
+    "adds information (positive)": 2,
+    "inconclusive": 1,
+    "opposite sign": 1
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.2546805532622389,
+    "purpleair_ca_south": -0.39620486251098436,
+    "purpleair_central_east": 0.15634257034890142,
+    "purpleair_west_other": 0.2679261802806773
+   }
+  },
+  "P2|spline|d|none": {
+   "k": 4,
+   "est": 0.371679713738964,
+   "lo": 0.2509946365456929,
+   "hi": 0.4809867676566021,
+   "tau": 0.04477242768916461,
+   "Q": 4.184701036178251,
+   "pi_lo": 0.12535714606021578,
+   "pi_hi": 0.5748396980867965,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.2831312944165442,
+    "purpleair_ca_south": 0.36764554625599627,
+    "purpleair_central_east": 0.4597015591978423,
+    "purpleair_west_other": 0.3694351660208029
+   }
+  },
+  "P1|bins|d|none": {
+   "k": 4,
+   "est": 0.124659179663294,
+   "lo": -0.24791194435863909,
+   "hi": 0.46510729111483795,
+   "tau": 0.22694506422709085,
+   "Q": 33.43890074662969,
+   "pi_lo": -0.751815709759423,
+   "pi_hi": 0.8419226127062849,
+   "verdict_counts": {
+    "adds information (positive)": 2,
+    "inconclusive": 2
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.25255555103364064,
+    "purpleair_ca_south": -0.21788699491544772,
+    "purpleair_central_east": 0.16376540163186432,
+    "purpleair_west_other": 0.2906596875930238
+   }
+  },
+  "P2|bins|d|none": {
+   "k": 4,
+   "est": 0.38070574233334553,
+   "lo": 0.24662820038854188,
+   "hi": 0.5004827948834428,
+   "tau": 0.06082553206672391,
+   "Q": 5.1865495025592345,
+   "pi_lo": 0.07045084158879293,
+   "pi_hi": 0.6238000310842982,
+   "verdict_counts": {
+    "adds information (positive)": 4
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.3311246234158997,
+    "purpleair_ca_south": 0.2960705262541876,
+    "purpleair_central_east": 0.4161543007514852,
+    "purpleair_west_other": 0.47088695580257456
+   }
+  },
+  "P1|linear|m|none": {
+   "k": 4,
+   "est": 0.012000167628465536,
+   "lo": -0.5033653786729844,
+   "hi": 0.5210681724520506,
+   "tau": 0.34836715748925023,
+   "Q": 74.72356876252978,
+   "pi_lo": -0.9316598252164374,
+   "pi_hi": 0.9347583784422471,
+   "verdict_counts": {
+    "adds information (positive)": 1,
+    "inconclusive": 2,
+    "opposite sign": 1
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.15233742160955996,
+    "purpleair_ca_south": -0.45767012093739456,
+    "purpleair_central_east": 0.059576694241260976,
+    "purpleair_west_other": 0.3177866658836346
+   }
+  },
+  "P2|linear|m|none": {
+   "k": 4,
+   "est": 0.18060962084178778,
+   "lo": 0.05441319103807249,
+   "hi": 0.3011270661400349,
+   "tau": 0.03754204135525432,
+   "Q": 3.8329582776496984,
+   "pi_lo": -0.05420635124015294,
+   "pi_hi": 0.3964965890669826,
+   "verdict_counts": {
+    "adds information (positive)": 1,
+    "inconclusive": 3
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.08675553571769325,
+    "purpleair_ca_south": 0.15278875800011454,
+    "purpleair_central_east": 0.2678059146059107,
+    "purpleair_west_other": 0.21173173319546726
+   }
+  },
+  "P1|spline|m|none": {
+   "k": 4,
+   "est": 0.05892101885098616,
+   "lo": -0.5123723825350623,
+   "hi": 0.5940619498625551,
+   "tau": 0.3862194736589779,
+   "Q": 91.15679976355,
+   "pi_lo": -0.9473455516829612,
+   "pi_hi": 0.9581813542578691,
+   "verdict_counts": {
+    "adds information (positive)": 1,
+    "inconclusive": 2,
+    "opposite sign": 1
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.23418056054162098,
+    "purpleair_ca_south": -0.46863091830173303,
+    "purpleair_central_east": 0.12282848862641943,
+    "purpleair_west_other": 0.36462694262534556
+   }
+  },
+  "P2|spline|m|none": {
+   "k": 4,
+   "est": 0.29413938346009255,
+   "lo": 0.14924197706098424,
+   "hi": 0.426669921410899,
+   "tau": 0.0643128615801809,
+   "Q": 5.444461201297222,
+   "pi_lo": -0.042148498765689595,
+   "pi_hi": 0.5705627879339128,
+   "verdict_counts": {
+    "adds information (positive)": 3,
+    "inconclusive": 1
+   },
+   "verdict": "adds information (positive)",
+   "per_group": {
+    "purpleair_ca_north": 0.1837043997426554,
+    "purpleair_ca_south": 0.3306264173728731,
+    "purpleair_central_east": 0.3882048262605872,
+    "purpleair_west_other": 0.26672720898843527
+   }
+  },
+  "P1|bins|m|none": {
+   "k": 4,
+   "est": 0.04974451563750053,
+   "lo": -0.48343113056914344,
+   "hi": 0.5559992006325796,
+   "tau": 0.35569828828710554,
+   "Q": 77.77407192361272,
+   "pi_lo": -0.9313075471905813,
+   "pi_hi": 0.9433598552723836,
+   "verdict_counts": {
+    "adds information (positive)": 2,
+    "inconclusive": 1,
+    "opposite sign": 1
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.23844527517578334,
+    "purpleair_ca_south": -0.44491983972065835,
+    "purpleair_central_east": 0.11079450533684068,
+    "purpleair_west_other": 0.3123203375377279
+   }
+  },
+  "P2|bins|m|none": {
+   "k": 4,
+   "est": 0.1981075233119229,
+   "lo": -0.018674972961814546,
+   "hi": 0.3970998693693428,
+   "tau": 0.11807586262165211,
+   "Q": 11.239668416303733,
+   "pi_lo": -0.36925535993538927,
+   "pi_hi": 0.6578901635852252,
+   "verdict_counts": {
+    "adds information (positive)": 2,
+    "inconclusive": 2
+   },
+   "verdict": "inconclusive",
+   "per_group": {
+    "purpleair_ca_north": 0.007124902135293038,
+    "purpleair_ca_south": 0.24567118321113404,
+    "purpleair_central_east": 0.3190897865443083,
+    "purpleair_west_other": 0.2112590887744333
+   }
+  }
+ },
+ "study2_H1_hartung_knapp": {
+  "est": 0.3461887275557653,
+  "lo": 0.14109949701436247,
+  "hi": 0.5227866149109848
+ }
+}

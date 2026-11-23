@@ -35,7 +35,7 @@ def fig_contrast(o, ob):
             if r and c:
                 intel.append((f"Intel {m.split('_')[-1]} (Study 1)", r, c))
     rows = rows + intel
-    fig, ax = plt.subplots(figsize=(4.8, 0.3 * len(rows) + 1.3))
+    fig, ax = plt.subplots(figsize=(3.6, 0.27 * len(rows) + 1.2))
     ax.axvspan(-ROPE, ROPE, color="#eeeeee", zorder=0); ax.axvline(0, color=MUTE, lw=0.8)
     for i, (lab, r, c) in enumerate(rows):
         a, b = c["rho"]["v2_axis"], r["rho"]["v2_axis"]
@@ -48,7 +48,7 @@ def fig_contrast(o, ob):
     if intel:
         ax.axhline(len(GROUPS) - 0.5, color=LIGHT, lw=0.6)
     ax.set_yticks(list(range(len(rows))) + [j]); ax.set_yticklabels([r[0] for r in rows] + ["H1 pooled (PurpleAir)"])
-    ax.invert_yaxis(); ax.set_xlabel("partial Spearman ρ(robustness axis, OOD loss | ID loss)")
+    ax.invert_yaxis(); ax.set_xlabel("partial ρ(axis, OOD loss | ID loss)")
     ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2); F.hide(ax); ax.grid(axis="y", visible=False)
     F.save(fig, "sc_contrast")
 

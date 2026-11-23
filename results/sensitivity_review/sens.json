@@ -1,0 +1,149 @@
+{
+ "note": "UNREGISTERED sensitivity analyses added after an internal review; see the script docstring",
+ "S1_P1_bootstrap": {
+  "est": 0.22386752130322884,
+  "lo": 0.08651186866333298,
+  "hi": 0.34279301349279645,
+  "n_shifts": 60,
+  "n_domains": 12
+ },
+ "S1_P1_random_effects": {
+  "k": 12,
+  "est": 0.260087494023274,
+  "lo": 0.1462020636940684,
+  "hi": 0.3671691243566722,
+  "tau": 0.15836023426710724,
+  "Q": 74.27270337716178,
+  "pi_lo": -0.10622422801580807,
+  "pi_hi": 0.5642393958712842,
+  "verdict_counts": {
+   "adds information (positive)": 6,
+   "inconclusive": 6
+  },
+  "verdict": "adds information (positive)"
+ },
+ "S1_P1_none_bootstrap": {
+  "est": 0.2424434744892604,
+  "lo": 0.08291250338965689,
+  "hi": 0.3787464010197478,
+  "n_shifts": 60,
+  "n_domains": 12,
+  "verdict": "inconclusive"
+ },
+ "S1_P1_none_random_effects": {
+  "k": 12,
+  "est": 0.27102288745092157,
+  "lo": 0.11073575525599094,
+  "hi": 0.4175683433344701,
+  "tau": 0.2386845231237295,
+  "Q": 131.31612878585315,
+  "pi_lo": -0.27291493567856495,
+  "pi_hi": 0.6836556038186475,
+  "verdict_counts": {
+   "adds information (positive)": 5,
+   "inconclusive": 7
+  },
+  "verdict": "adds information (positive)"
+ },
+ "S1_disagree_minus_axis_z": {
+  "est": 0.15880981642697445,
+  "lo": 0.041347196449601484,
+  "hi": 0.2664307596781047,
+  "n_shifts": 60,
+  "n_domains": 12
+ },
+ "S2_H1_registered_check": {
+  "est": 0.3461887275557653,
+  "lo": 0.1410994970143625,
+  "hi": 0.5227866149109848
+ },
+ "S2_H1_none": {
+  "k": 4,
+  "est": 0.1847854175118094,
+  "lo": -0.23118584553996058,
+  "hi": 0.5436394421351106,
+  "tau": 0.2556998124771518,
+  "Q": 41.6409949136027,
+  "pi_lo": -0.7828256786238722,
+  "pi_hi": 0.8909456205066508,
+  "verdict_counts": {
+   "adds information (positive)": 2,
+   "inconclusive": 2
+  },
+  "verdict": "inconclusive"
+ },
+ "S2_H2_none": {
+  "k": 4,
+  "est": 0.3187122864031319,
+  "lo": -0.08274554480425123,
+  "hi": 0.720170117610515,
+  "n_positive": 3,
+  "per_group": {
+   "purpleair_ca_north": 0.4450135257106153,
+   "purpleair_ca_south": 0.3687571046127577,
+   "purpleair_central_east": -0.04959733855110268,
+   "purpleair_west_other": 0.5106758538402573
+  },
+  "supported": false
+ },
+ "S2_H1_none_per_group": {
+  "purpleair_ca_north": 0.3477580078681004,
+  "purpleair_ca_south": -0.19636656078962192,
+  "purpleair_central_east": 0.21944148176869138,
+  "purpleair_west_other": 0.34584932416123
+ },
+ "S2_aug_paired": {
+  "purpleair_ca_north": {
+   "median_d": -0.02733487846729693,
+   "median_log_ood": -0.09995936809701322
+  },
+  "purpleair_ca_south": {
+   "median_d": -0.06621374021190855,
+   "median_log_ood": -0.02684070541303285
+  },
+  "purpleair_central_east": {
+   "median_d": -0.015658916084811035,
+   "median_log_ood": -0.02594088585039045
+  },
+  "purpleair_west_other": {
+   "median_d": -0.01890246291740902,
+   "median_log_ood": 0.053312308695789845
+  }
+ },
+ "S2_H1_none_within": {
+  "k": 4,
+  "est": 0.4051588582488651,
+  "lo": 0.29024633822069296,
+  "hi": 0.5085529796108728,
+  "tau": 0.041212425162552954,
+  "Q": 4.003792216777406,
+  "pi_lo": 0.17731686535779717,
+  "pi_hi": 0.5917794893856256,
+  "verdict_counts": {
+   "adds information (positive)": 4
+  },
+  "verdict": "adds information (positive)"
+ },
+ "S2_rho_per_replicate": {
+  "purpleair_ca_north": [
+   0.6512785802814773,
+   0.5487121672032165,
+   0.13561544803217226
+  ],
+  "purpleair_ca_south": [
+   0.39530711597145496,
+   0.12459288009253908,
+   -0.012952257217213476
+  ],
+  "purpleair_central_east": [
+   0.4025920832512289,
+   0.3657844198283539,
+   0.32725941921494756
+  ],
+  "purpleair_west_other": [
+   0.503485474735339,
+   0.2712364295511451,
+   0.2823238993772358
+  ]
+ }
+}

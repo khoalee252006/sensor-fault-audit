@@ -1,6 +1,6 @@
 # Study B — deviations from the registered plan and execution log
 
-Registration: https://osf.io/er6ms/overview?view_only=03d7838c728048078ff965bb357499c0 (2026-10-29). The registered files `docs/PREREG_TESTBED.md`,
+Registration: https://osf.io/er6ms (2026-10-29). The registered files `docs/PREREG_TESTBED.md`,
 `trust/testbed.py` and `scripts/16_testbed_analyze.py` were re-hashed on 2026-10-31 after the analysis run;
 all three still match the SHA-256 values in `README.md`. Nothing below changes §2–§6 of the plan.
 Every entry says what happened, why, and what was checked. The paper reports all of them.
@@ -79,3 +79,43 @@ backup existed.
     - `summary.json` edd8c17e617606eba44afa7add0c3213004bdd6fb4833826885ff8ed0bdda15f
     - `summary.txt` af1ef3056e48a6849fa163352cda36f7f25ae61ed07dbd57204bb36d514c7b65
 - **Primary results were looked at only after the run had finished** (no interim analysis of the confirmatory runs).
+
+## Sensitivity analyses added after an internal review (2026-11-02; unregistered, not deviations)
+
+`scripts/25_sensitivity_review.py` → `results/sensitivity_review/sens.json`. It uses only the stored models and the
+frozen functions of `scripts/16_testbed_analyze.py` and `scripts/19_studyC_analyze.py`, and it first reproduces the
+registered Study C H1 as a check. Reported in the paper as unregistered:
+- the main estimands restricted to the models without augmentation (variant `none`), because a third of the
+  testbed is trained with the fault kinds of the registered axis: Study B P1 (bootstrap and random effects),
+  Study C H1, H1 within families and H2;
+- Study B P1 with its random-effects interval next to the registered bootstrap interval;
+- Study B paired comparison of the disagreement ratio with the registered axis;
+- Study C spread of the estimand over replicates, and the paired effect of fault augmentation on the axis and on
+  the OOD loss.
+The registered analyses and their verdicts are unchanged.
+
+## Sensitivity analyses added after a pre-submission review (2026-11-21)
+Unregistered; added after the registered and the earlier added analyses had been run and read. A pre-submission
+review noted two points about the estimand.
+- The partial Spearman correlation removes only a straight-line trend in the rank of the ID loss.
+- The registered axis d = mean log L_mid - log L_ID contains the controlled variable itself.
+
+`scripts/26_review_sensitivity.py` therefore repeats P1 (all models) and P2 (within families) of both studies:
+- with the ID rank controlled by a cubic B-spline (6 interior knots) or within its deciles;
+- with the signal replaced by m = mean log loss under the four registered faults at mid severity;
+- for all models and for the models without augmentation.
+
+Pooling is as registered: cluster bootstrap over domains for Study B, and DerSimonian-Laird random effects with a
+t(k-1) interval for Study C. For the registered Study C H1, a Hartung-Knapp-Sidik-Jonkman interval is added; it
+gives the same bounds.
+
+The script uses only stored model records and the frozen functions of `scripts/16_testbed_analyze.py`. It writes
+`results/sensitivity_review2/sens2.json` and the supplement table `paper_overleaf/supp_review.tex`, and it
+reproduces the registered estimates exactly.
+
+Results:
+- Study B: the alternatives raise P1 from +0.22 to +0.23...+0.30; 4 of 5 clear the threshold.
+- Study C: H1 over all models falls to +0.15...+0.29; 1 of 5 clears the threshold.
+- Study C, within families: positive in all 12 combinations (+0.18...+0.41); 10 of 12 clear the threshold.
+
+The registered analyses and their verdicts are unchanged.

@@ -121,7 +121,7 @@ def fig_primary(o):
     if m1.get("k", 0) < 2:
         return
     doms = sorted(m1["per_domain"], key=lambda g: -m1["per_domain"][g]["est"])
-    fig, ax = plt.subplots(figsize=(5.0, 0.3 * len(doms) + 1.2))
+    fig, ax = plt.subplots(figsize=(3.6, 0.27 * len(doms) + 1.1))
     ax.axvspan(-o["rope"], o["rope"], color="#eeeeee", zorder=0); ax.axvline(0, color=MUTE, lw=0.8)
     for off, m, c, lab in ((-0.15, m1, C1, "all models (P1)"), (0.15, m2, C2, "within families (P2)")):
         for i, g in enumerate(doms):
@@ -135,7 +135,7 @@ def fig_primary(o):
         ax.plot([m["lo"], m["hi"]], [j, j], color=c, lw=3, solid_capstyle="butt")
         ax.plot(m["est"], j, "D", ms=5, color=c, mec="white")
     ax.set_yticks(list(range(len(doms))) + [len(doms) + 0.85]); ax.set_yticklabels([g.replace("_", " ") for g in doms] + ["pooled (dotted = new domain)"])
-    ax.invert_yaxis(); ax.set_xlabel("partial Spearman ρ(robustness axis, OOD loss | ID loss)")
+    ax.invert_yaxis(); ax.set_xlabel("partial ρ(axis, OOD loss | ID loss)")
     ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2); hide(ax); ax.grid(axis="y", visible=False)
     save(fig, "tb_primary")
 
